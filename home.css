@@ -1,0 +1,34 @@
+body{    background-color: rgb(20,25,47);}
+div #main {
+    margin-left:10%;
+    margin-right: 15%;
+    background-color: red; 
+}
+
+#nav_menu{
+    width:1025px;
+    height: 50px;
+}
+#nav_menu ul ul{margin:0; padding:0; display:none; position: absolute; top: 100%;width: 205px; z-index: 2;}
+#nav_manu ul ul li{float:none;}
+#nav_menu ul li:hover > ul{display:block;}
+#nav_menu ul{list-style-type:none;padding:0;margin:0;position: relative;}
+#nav_menu li {
+    float:left; 
+    width: 205px; 
+    text-align: center; 
+    line-height: 50px;   
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0; 
+    margin: 0;
+    color:white;
+}
+#nav_menu > ul::after {content: "";display: block;clear: both; }
+#nav_menu li:hover{background-color:lightsteelblue;}
+#nav_menu a{
+    text-decoration: none; 
+    color:white;
+    font-size: 18px;
+}
+#nav_menu #currPage{color:black}
