@@ -1,19 +1,26 @@
-body{    background-color: rgb(20,25,47);}
-div #main {
+body{    background-color: gray}
+#main {
     margin-left:10%;
-    margin-right: 15%;
-    background-color: red; 
+    margin-right: 10%;
+    margin-bottom:0%;
+    margin-top:0%;
+    position: absolute;
+    width: 80%;
+    height:100%;
+    background-color:  rgb(20,25,47); 
+    opacity: 90%;
 }
 
-#nav_menu{
-    width:1025px;
+#text_nav{
+    width: 80%;
     height: 50px;
+    float: left;
 }
-#nav_menu ul ul{margin:0; padding:0; display:none; position: absolute; top: 100%;width: 205px; z-index: 2;}
-#nav_manu ul ul li{float:none;}
-#nav_menu ul li:hover > ul{display:block;}
-#nav_menu ul{list-style-type:none;padding:0;margin:0;position: relative;}
-#nav_menu li {
+#text_nav ul ul{margin:0; padding:0; display:none; position: absolute; top: 100%;width: 205px; z-index: 2;}
+#text_nav ul ul li{float:none;}
+#text_nav ul li:hover > ul{display:block;}
+.top_nav ul{list-style-type:none;padding:0;margin:0;position: relative;}
+#text_nav li {
     float:left; 
     width: 205px; 
     text-align: center; 
@@ -24,11 +31,14 @@ div #main {
     margin: 0;
     color:white;
 }
-#nav_menu > ul::after {content: "";display: block;clear: both; }
-#nav_menu li:hover{background-color:lightsteelblue;}
-#nav_menu a{
+#text_nav > ul::after {content: "";display: block;clear: both; }
+#text_nav li:hover{background-color:lightsteelblue;}
+#text_nav a{
     text-decoration: none; 
     color:white;
     font-size: 18px;
 }
-#nav_menu #currPage{color:black}
+#text_nav #currPage{color:black}
+#img_nav {float: right;}
+#pfp {height: 50px;
+width: 50px;}
