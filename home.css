@@ -45,12 +45,14 @@ body{    background-color: gray}
     float:right; 
 }
 #text_nav > ul::after {content: "";display: block;clear: both; }
-#text_nav li:hover{background-color:lightsteelblue;}
+#text_nav li:hover{background-color:steelblue;}
 #text_nav a{
     text-decoration: none; 
     color:white;
     font-size: 18px;
 }
-#text_nav #currPage{color:black}
-#pfp {height: 50px;
-width: 50px;}
+#text_nav #currPage{background-color: steelblue;}
+#pfp, #cart {height: 50px;width: 50px;}
+.games{
+    align-items: center;
+}
