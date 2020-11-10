@@ -1,4 +1,10 @@
 body{    background-color: gray}
+
+#icon{
+    width: 10%;
+    height: auto;
+}
+
 #main {
     margin-left:10%;
     margin-right: 10%;
