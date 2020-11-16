@@ -19,7 +19,7 @@
                     <li class="li_right"><img id="pfp" src="images/profilepic.png">
                         <ul>
                             <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                            <li><a href="">My Account</a></li>
+                            <li><a href="myAccount.php">My Account</a></li>
                             <li><a href="">Log Out</a></li>
                         </ul>
                     </li>
@@ -32,13 +32,15 @@
                 <fieldset id="payment">
                     <legend class="title">1. Payment Method</legend>
                     <form>
-                        <input type="submit" class="select" name="credit" value="Select">
-                        <label>Credit Card</label><br>
-                        <input type="submit" class="select" name="paypal" value="Select">
-                        <label>PayPal</label><br>
+                        <input type="submit" class="select" name="credit" value="Change">
+                        <label>Credit Card:</label><br>
+                    </form>
+                    <form>
                         <label>eShop Gift Card:</label><br>
                         <input type="submit" class="select" name="gc" value="Use">
                         <label>Current Gift Card Balance: </label><br>
+                    </form>
+                    <form>
                         <input type="text" name="giftcard" placeholder="Enter Code">
                         <input type="submit" value="Apply">
                     </form>
@@ -77,8 +79,7 @@
                 <fieldset id="review">
                     <legend class="title">2. Review Items</legend>
                     <p>Total: <?php ?></p>
-                </fieldset>
-                
+                </fieldset> 
             </div>
             
         </div>
