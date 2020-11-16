@@ -1,0 +1,28 @@
+#icon{
+    width: 10%;
+    height: auto;
+}
+
+img{
+    width: 70%;
+    height: auto;
+}
+
+td, p, h1{
+    text-align: center;
+    color: white;
+}
+
+#intro{
+    margin-top: 50px;
+}
+
+p{
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+a{
+    color: gold;
+}
