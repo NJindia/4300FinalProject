@@ -48,29 +48,29 @@
 
             <form action="add_from_contact_us.php" method="post">
                 <fieldset id="contact_us_field">
-                <div class="center_div">
+                    <div class="center_div">
+                        <div class="name_div">
+                            <label>First Name </label><span id="error1">*</span><br>
+                            <input class="name_input" type="text" name="firstName" required autofocus><br>
+                        </div>
+                        <div class="name_div">
+                            <label>Last Name </label><span id="error2">*</span><br>
+                            <input class="name_input" type="text" name="lastName" required><br>
+                        </div>
+                    </div><br>
                     <div class="name_div">
-                         <label>First Name </label><br>
-                         <input class="name_input" type="text" name="firstName"><br>
-                    </div>
+                    <label>Email </label> <span id="error1">*</span><br>
+                    <input class="email_input" type="text" name="email" required><br>
+                    </div><br>
                     <div class="name_div">
-                        <label>Last Name </label><br>
-                        <input class="name_input" type="text" name="lastName"><br>
-                    </div>
-                </div><br>
-                <div class="name_div">
-                <label>Email </label> <br>
-                <input class="email_input" type="text" name="email"><br>
-                </div><br>
-                <div class="name_div">
-                <label>Message </label><br>
-                <input class="message_input" type="text" name="message"><br>
-                </div><br>
-                <div class="name_div">
-                <label>Additional Details </label><br>
-                <input class="additional_input" type="text" name="additionalInfo"><br>
-                </div><br>
-                <input class="addButton" type="submit" value="Send Message"><br>
+                    <label>Message </label><br>
+                    <input class="message_input" type="text" name="message"><br>
+                    </div><br>
+                    <div class="name_div">
+                    <label>Additional Details </label><br>
+                    <input class="additional_input" type="text" name="additionalInfo"><br>
+                    </div><br>
+                    <input class="submitButton" type="submit" id="submit" value="Send Message"><br>
                 </fieldset>
             </form>
 

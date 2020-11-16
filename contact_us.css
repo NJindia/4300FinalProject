@@ -104,3 +104,8 @@ input {
 #contact_us_field {
   border: none;
 }
+
+span {
+  color: red;
+  margin-left: 5px;
+}
