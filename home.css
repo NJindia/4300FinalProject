@@ -7,6 +7,12 @@ body {
   height: auto;
 }
 
+#title_logo{
+  width: 30%;
+  height: auto;
+  padding-bottom: 10px;
+}
+
 #main {
   margin-left: 10%;
   margin-right: 10%;
