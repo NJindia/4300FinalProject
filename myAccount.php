@@ -59,7 +59,7 @@ $info = $info->fetch();
                     <form action="" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
                         <p><strong>Email:</strong>
-                            <?php echo $infos['email']; ?>
+                            <?php echo $info['email']; ?>
                         </p>
                         <p><strong>Password:</strong> *****</p>
                         <input type="submit" value="Edit E-Mail and Password">
