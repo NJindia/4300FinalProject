@@ -7,6 +7,12 @@ body {
   height: auto;
 }
 
+#title_logo{
+  width: 30%;
+  height: auto;
+  padding-bottom: 10px;
+}
+
 #main {
   margin-left: 10%;
   margin-right: 10%;
@@ -17,6 +23,7 @@ body {
   min-height: 100%;
   background-color: rgb(20, 25, 47);
   opacity: 90%;
+  padding-bottom: 2%;
 }
 
 #text_nav {
@@ -85,5 +92,10 @@ body {
   width: 50px;
 }
 .games {
-  align-items: center;
+  display: block;
+  height: 30%;
+  width: 90%;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }

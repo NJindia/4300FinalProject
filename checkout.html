@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <title>TITLE</title>
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="checkout.css">
+    </head>
+    <body>
+        <div id="main">
+            <img id="icon" src="images/icon.png">
+            <img id="title_logo" src="images/title.png"><br>
+            <nav id="text_nav" class="top_nav">
+                <ul>
+                    <li class="li_left"  ><a href="home.html">Home</a></li>
+                    <li class="li_left"><a href="about_us.html">About Us</a></li>
+                    <li class="li_left"><a href="contact_us.html">Contact Us</a></li>
+                    <li class="li_right"><img id="pfp" src="images/profilepic.png">
+                        <ul>
+                            <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                            <li><a href="">My Account</a></li>
+                            <li><a href="">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li class="li_right"><img id="cart" src="images/cart.png"></li>    
+                </ul>
+            </nav>
+            <div id="content">
+                <h1 id="title">Checkout</h1>
+
+                <fieldset id="payment">
+                    <legend class="title">1. Payment Method</legend>
+                    <form>
+                        <input type="submit" class="select" name="credit" value="Select">
+                        <label>Credit Card</label><br>
+                        <input type="submit" class="select" name="paypal" value="Select">
+                        <label>PayPal</label><br>
+                        <label>eShop Gift Card:</label><br>
+                        <input type="submit" class="select" name="gc" value="Use">
+                        <label>Current Gift Card Balance: </label><br>
+                        <input type="text" name="giftcard" placeholder="Enter Code">
+                        <input type="submit" value="Apply">
+                    </form>
+                </fieldset>
+
+                <fieldset id="summary">
+                    <legend class="title">3. Order Summary</legend>
+                    <table>
+                        <tr>
+                            <td>Price:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tax:</td>
+                            <td>$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Applied Funds:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Balance:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Payment Method:</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <form action="process_order.php" method="post">
+                        <input type="hidden" name="total" value="">
+                        <input id="buy" type="submit" value="Purchase">
+                    </form>
+                </fieldset>
+
+                <fieldset id="review">
+                    <legend class="title">2. Review Items</legend>
+                    <p>Total: <?php ?></p>
+                </fieldset>
+                
+            </div>
+            
+        </div>
+        
+    </body>
+    <footer>
+        
+    </footer>
+</html>

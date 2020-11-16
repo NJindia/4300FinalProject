@@ -1,0 +1,68 @@
+#title{
+    text-align: center;
+    color: white;
+    font-size: 300%
+}
+#summary{
+    float: right;
+    width: 25%;
+    margin-right: 5em;
+}
+
+#content{
+    margin: auto;
+    width: 100%;
+}
+
+fieldset{
+    float: left;
+    width: 50%;
+    margin: 30px;
+    padding: 30px;
+}
+
+#review{
+    clear: both;
+}
+
+legend{
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+label{
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.select{
+    display: inline;
+    padding-left: 20px;
+}
+
+p{
+    color: white;
+    text-align: right;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    width: 85%;
+    color: white;
+}
+
+#buy{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 200%;
+}
