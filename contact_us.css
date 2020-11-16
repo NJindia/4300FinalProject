@@ -1,0 +1,106 @@
+/* contact_us page */
+#contact_us {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 5%;
+  position: relative;
+  width: 98%;
+  min-height: 80%;
+  background-color: rgb(196, 211, 221);
+  opacity: 90%;
+  float: left;
+  text-align: center;
+}
+#contact_us.center {
+  text-align: center;
+}
+
+.no_top_margin {
+  margin-top: -5px;
+}
+
+.top_margin {
+  margin-top: 20px;
+}
+
+/* fonts */
+.monospace {
+  font-family: "Liberation Mono", "Courier New", monospace;
+  font-weight: 100;
+}
+.maroon {
+  color: maroon;
+}
+.black {
+  color: black;
+}
+
+p {
+  line-height: 60%;
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  text-align: left;
+}
+
+input {
+  float: none;
+}
+
+.name_div {
+  display: inline-block;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.center_div {
+  width: 40%;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.text_left {
+  text-align: center;
+}
+
+.name_input {
+  width: 120px;
+  height: 22px;
+}
+
+.additional_input {
+  width: 260px;
+  height: 70px;
+}
+
+.message_input {
+  width: 260px;
+  height: 45px;
+}
+
+.email_input {
+  width: 260px;
+  height: 25px;
+}
+
+.addButton {
+  margin-top: 12px;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+}
+
+#contact_us_field {
+  border: none;
+}
