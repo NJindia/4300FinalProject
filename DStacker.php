@@ -50,7 +50,7 @@ $user_id = 1
                     <input type="hidden" name="name" value="<?php echo $name; ?>">
                     <input type="hidden" name="price" value="<?php echo reset($price); ?>">
                     <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                    <input type="submit"><br>
+                    <input type="image" src="images/add_to_cart.png"><br>
                 </form>
             </div>
         </div>

@@ -21,6 +21,10 @@ SET time_zone = "+00:00";
 -- Database: `final_project`
 --
 
+DROP DATABASE IF EXISTS `final_project`;
+CREATE DATABASE `final_project`;
+USE `final_project`;
+
 -- --------------------------------------------------------
 
 --
@@ -34,12 +38,6 @@ CREATE TABLE `cart` (
   `price` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`cart_id`, `user_id`, `name`, `price`) VALUES
-(1, 1, 'DStacker', '5.00');
 
 -- --------------------------------------------------------
 
@@ -89,3 +87,52 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_info`
+--
+
+CREATE TABLE `user_info` (
+  `id` int(11) NOT NULL,
+  `first` varchar(45) NOT NULL,
+  `last` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(150) NOT NULL,
+  `phone` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_info`
+--
+
+INSERT INTO `user_info` (`id`, `first`, `last`, `email`, `password`, `phone`) VALUES
+(1, 'Alex', 'Nguyen', 'johndoe@gmail.com', 'password', '1231231234');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `user_info`
+--
+ALTER TABLE `user_info`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email_UNIQUE` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user_info`
+--
+ALTER TABLE `user_info`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
