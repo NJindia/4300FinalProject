@@ -1,5 +1,5 @@
 <?php
-include('database.php');
+require_once('database.php');
 
 $query = "SELECT * FROM user_info WHERE id = '1'";
 $info = $db->query($query);
