@@ -52,7 +52,7 @@ $info = $info->fetch();
                         <p><strong>Phone Number:</strong>
                             <?php echo $info['phone']; ?>
                         </p>
-                        <input type="submit" name = "userID" value=<?php echo$info['id'];?>>
+                        <input type="submit" value="Edit Personal Information">
                     </form>
                 </div><br>
                 <div id="emailAndPass">
