@@ -22,14 +22,16 @@ $paymentInfo = $paymentInfo->fetch();
 
 <head>
     <meta charset="utf8">
-    <title>TITLE</title>
+    <title>My Account</title>
     <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="myAccount.css">
 </head>
 
 <body>
     <div id="main">
-        <img id="icon" src="images/icon.png"><br>
+        <img id="icon" src="images/icon.png">
+        <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
         <!--Start Navigation Bar-->
         <nav id="text_nav" class="top_nav">
             <ul>
