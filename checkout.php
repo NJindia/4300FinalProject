@@ -17,7 +17,7 @@
 <html lang="en">
     <head>
         <meta charset="utf8">
-        <title>CHECKOUT</title>
+        <title>Checkout</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="checkout.css">
