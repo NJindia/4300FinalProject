@@ -1,23 +1,18 @@
 <?php
-require_once('database.php');
-#$email = filter_input(INPUT_POST, 'email');
-$email = 'johndoe.gmail.com';
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf8">
-        <title>Thank You For Your Purchase!</title>
+        <title>Smoke Games</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="home.css">
-        <link rel="stylesheet" href="post_order.css">
     </head>
     <body>
         <div id="main">
-                        <a href="home.html"><img id="icon" src="images/icon.png"></a>
+            <a href="home.html"><img id="icon" src="images/icon.png"></a>
             <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
@@ -34,16 +29,17 @@ $email = 'johndoe.gmail.com';
                     <li class="li_right"><img id="cart" src="images/cart.png"></li>    
                 </ul>
             </nav>
-            <h3>Thank you for your purchase!</h3>
-            <h4>Your key(s) for your newly purchased game(s) can be found in the inbox of the email connected to your account: <?php echo $email; ?>. Be sure to check your spam folder if you do not see it in your inbox!</h4>
-            <div id="social_media">
-                <a href="#" ><img class="social_media" src="images/discord.png"></a>
-                <a href="#" ><img class="social_media" src="images/reddit.png"></a>
-                <a href="#" ><img class="social_media" src="images/twitter.png"></a>
-                <a href="#" ><img class="social_media" src="images/instagram.png"></a>
-                <br>
-                <p>&copy; Smoke Games</p>
-            </div>
+            <h1>Cart</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th></th>
+                        
+                </thead>
+            </table>
         </div>
     </body>           
 </html>
