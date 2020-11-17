@@ -57,7 +57,9 @@ CREATE TABLE `games` (
 INSERT INTO `games` (`name`, `price`) VALUES
 ('DStacker', '5.00');
 INSERT INTO `games` (`name`, `price`) VALUES
-('Hack_It', '5.00');
+('Hack_It;', '5.00');
+INSERT INTO `games` (`name`, `price`) VALUES
+('Mine Sweeper', '5.00');
 
 --
 -- Indexes for dumped tables

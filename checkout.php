@@ -1,8 +1,23 @@
+<?php
+    include('database.php');
+
+    $query = "SELECT * FROM cart WHERE user_id='1'";
+    $review = $db->query($query);
+
+    $sum=0.00;
+    foreach($review as $item):
+        $sum += $item['price'];
+    endforeach;
+    
+    $query = "SELECT * FROM cart WHERE user_id='1'";
+    $review = $db->query($query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf8">
-        <title>TITLE</title>
+        <title>Checkout</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="checkout.css">
@@ -35,15 +50,6 @@
                         <input type="submit" class="select" name="credit" value="Change">
                         <label>Credit Card:</label><br>
                     </form>
-                    <form>
-                        <label>eShop Gift Card:</label><br>
-                        <input type="submit" class="select" name="gc" value="Use">
-                        <label>Current Gift Card Balance: </label><br>
-                    </form>
-                    <form>
-                        <input type="text" name="giftcard" placeholder="Enter Code">
-                        <input type="submit" value="Apply">
-                    </form>
                 </fieldset>
 
                 <fieldset id="summary">
@@ -51,19 +57,15 @@
                     <table>
                         <tr>
                             <td>Price:</td>
-                            <td></td>
+                            <td><?php echo '$' . number_format($sum,2,'.',',');?></td>
                         </tr>
                         <tr>
                             <td>Tax:</td>
-                            <td>$0.00</td>
-                        </tr>
-                        <tr>
-                            <td>Applied Funds:</td>
-                            <td></td>
+                            <td id="tax">$0.00</td>
                         </tr>
                         <tr>
                             <td>Balance:</td>
-                            <td></td>
+                            <td><?php echo '$' . number_format($sum,2,'.',',');?></td>
                         </tr>
                         <tr>
                             <td>Payment Method:</td>
@@ -78,7 +80,16 @@
 
                 <fieldset id="review">
                     <legend class="title">2. Review Items</legend>
-                    <p>Total: <?php ?></p>
+                    <table>
+                        <?php foreach($review as $item):?>
+                            <tr>
+                                <td class="items"> <?php echo $item['name']?> </td> 
+                                <td class="items"> <?php echo '$' . number_format($item['price'],2,'.',',');?> </td>  
+                            </tr>
+                        <?php endforeach; ?>  
+                    </table>
+                    <a href="">Edit Cart</a>
+                    <p>Total: <?php echo '$' . number_format($sum,2,'.',',');?></p>
                 </fieldset> 
             </div>
             

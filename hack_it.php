@@ -1,7 +1,7 @@
 <?php
 require_once('database.php');
-$query = "SELECT price FROM games WHERE name = 'Hack_It' LIMIT 1";
-$name = 'Hack_It';
+$query = "SELECT price FROM games WHERE name = 'Hack_It;' LIMIT 1";
+$name = 'Hack_It;';
 $statement = $db->prepare($query);
 $statement->execute();
 $price = $statement->fetch();
@@ -13,14 +13,15 @@ $user_id = 1
 <html lang="en">
     <head>
         <meta charset="utf8">
-        <title>DStacker</title>
+        <title>Hack_It;</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="game_page.css">
         <link rel="stylesheet" href="home.css">
     </head>
     <body>
         <div id="main">
-            <img id="icon" src="images/icon.png"><br>
+            <img id="icon" src="images/icon.png">
+            <img id="title_logo" src="images/title.png"><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
                     <li class="li_left" id="currPage" ><a href="home.html">Home</a></li>
@@ -37,9 +38,9 @@ $user_id = 1
                 </ul>
             </nav>
             <div id="game_description">
-                <img src="images/hack_it.png"><br>
+                <img id="game" src="images/hack_it.png"><br>
                 <h1>Hack_It;</h1>
-                <p>
+                <p>   
                     Wanna be a Hacker, but scared it's illegal? No problem! With <em>Hack_It;</em>, it is legally safe! You play as a hacker going through each security level, infiltrating someone's personal information which will lead you to gain full control of their PC. Evil indeed. Solve puzzles as you unlock each layer of security and find out what secrets are hidden in your victim's computer. Don't wait; Evil awaits!
                 </p>
                 <h2>Price: $<?php echo reset($price); ?></h2>
@@ -53,4 +54,5 @@ $user_id = 1
         </div>
     </body>
 </html>
+
 
