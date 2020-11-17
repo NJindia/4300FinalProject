@@ -65,8 +65,8 @@ $info = $info->fetch();
                             <input type="text" placeholder="<?php echo $info['email'] ?>" name="email"><br>
                         </p>
                         <p><strong>Password:</strong><br>
-                            <input type="text" placeholder="Enter Current Password" name="currPass"><br>
-                            <input type="text" placeholder="Enter New Password" name="password"><br>
+                            <input type="text" placeholder="Enter Current Password" name="currentPass"><br>
+                            <input type="text" placeholder="Enter New Password" name="newPass"><br>
                         </p>
                         <input type="submit" value="Save">
                     </form>
