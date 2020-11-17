@@ -93,13 +93,15 @@ $paymentInfo = $paymentInfo->fetch();
                 </div>
             </div>
         </div>
-
-
+        <div id="social_media">
+                <a href="#" ><img class="social_media" src="images/discord.png"></a>
+                <a href="#" ><img class="social_media" src="images/reddit.png"></a>
+                <a href="#" ><img class="social_media" src="images/twitter.png"></a>
+                <a href="#" ><img class="social_media" src="images/instagram.png"></a>
+                <br>
+                <p>&copy; Smoke Games</p>
+        </div>
     </div>
-
 </body>
-<footer>
-
-</footer>
 
 </html>
