@@ -21,6 +21,10 @@ fieldset{
     padding: 30px;
 }
 
+#tax{
+    text-align: right;
+}
+
 #review{
     clear: both;
 }
@@ -56,6 +60,15 @@ table{
 
 td{
     width: 85%;
+    color: white;
+}
+
+.items{
+    font-size: 200%;
+    width: 100%;
+}
+
+a{
     color: white;
 }
 

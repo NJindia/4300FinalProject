@@ -10,26 +10,26 @@ body {
 #title_logo{
   width: 30%;
   height: auto;
-  padding-bottom: 10px;
+  padding-bottom: 2%;
 }
 
 #main {
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 0%;
   margin-top: 0%;
-  position: absolute;
   width: 80%;
   min-height: 100%;
   background-color: rgb(20, 25, 47);
+  position: relative;
+  float: left;
   opacity: 90%;
-  padding-bottom: 2%;
+  padding-bottom: 0%;
+  margin-bottom: 1%;
+
 }
 
 #text_nav {
-  min-width: 1000px;
   width: 100%;
-  height: 50px;
   float: left;
 }
 #text_nav ul ul {
@@ -43,6 +43,7 @@ body {
 #text_nav ul ul li {
   float: none;
   width: 100%;
+  font-size: 100%;
 }
 #text_nav ul li:hover > ul {
   display: block;
@@ -54,20 +55,21 @@ body {
   position: relative;
 }
 #text_nav li {
-  width: 10%;
   text-align: center;
-  line-height: 50px;
+  line-height: 200%;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 150%;
   padding: 0;
   margin: 0;
   color: white;
 }
 #text_nav li.li_left {
   float: left;
+  width: 15%;
 }
 #text_nav li.li_right {
   float: right;
+  width: 10%;
 }
 #text_nav > ul::after {
   content: "";
@@ -86,18 +88,39 @@ body {
 }
 #pfp,
 #cart {
-  height: 50px;
-  width: 50px;
+  width: 30%;
 }
 .games {
   display: block;
   height: 30%;
   width: 80%;
-  margin-bottom: 5px;
+  margin-bottom: 1%;
   margin-left: auto;
   margin-right: auto;
 }
 
 #games {
   margin-top:4%;
+}
+
+#social_media {   
+  line-height: 100%;
+  width: 100%;
+  background-color: steelblue;
+  opacity: 90%;
+  text-align: center;
+  float: left;
+}
+
+#social_media p {color: white;font-size: 100%;}
+
+img.social_media {
+  padding: .5%;
+  padding-bottom: .5%;
+  width:3%;
+  text-decoration: none;
+}
+
+.social_media:hover {
+    opacity: 0.7;
 }

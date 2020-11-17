@@ -20,8 +20,8 @@ $user_id = 1
     </head>
     <body>
         <div id="main">
-            <img id="icon" src="images/icon.png">
-            <img id="title_logo" src="images/title.png"><br>
+                        <a href="home.html"><img id="icon" src="images/icon.png"></a>
+            <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
                     <li class="li_left" id="currPage" ><a href="home.html">Home</a></li>
@@ -53,6 +53,14 @@ $user_id = 1
                     <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
                     <input type="image" src="images/add_to_cart.png"><br>
                 </form>
+            </div>
+            <div id="social_media">
+                <a href="#" ><img class="social_media" src="images/discord.png"></a>
+                <a href="#" ><img class="social_media" src="images/reddit.png"></a>
+                <a href="#" ><img class="social_media" src="images/twitter.png"></a>
+                <a href="#" ><img class="social_media" src="images/instagram.png"></a>
+                <br>
+                <p>&copy; Smoke Games</p><br>
             </div>
         </div>
     </body>
