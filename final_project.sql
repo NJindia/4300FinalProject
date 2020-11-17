@@ -140,3 +140,23 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+CREATE TABLE `payment` (
+  `payment_id` int(11) NOT NULL,
+  `user_id` varchar(45) NOT NULL,
+  `type` varchar(45) NOT NULL,
+  `card_num` varchar(16) NOT NULL,
+  `expiration` datetime NOT NULL,
+   PRIMARY KEY (`payment_id`),
+   UNIQUE KEY (`card_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  
+  CREATE TABLE `address` (
+  `address_id` int(11) NOT NULL,
+  `user_id` varchar(45) NOT NULL,
+  `street` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `state` varchar(100) NOT NULL,
+  `zipcode` varchar(5) NOT NULL,
+  PRIMARY KEY (`address_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  
