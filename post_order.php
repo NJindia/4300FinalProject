@@ -1,3 +1,11 @@
+<?php
+require_once('database.php');
+#$email = filter_input(INPUT_POST, 'email');
+$email = 'johndoe.gmail.com';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,10 +13,11 @@
         <title>Smoke Games</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="post_order.css">
     </head>
     <body>
         <div id="main">
-            <a href="home.html"><img id="icon" src="images/icon.png"></a>
+                        <a href="home.html"><img id="icon" src="images/icon.png"></a>
             <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
@@ -25,11 +34,7 @@
                     <li class="li_right"><img id="cart" src="images/cart.png"></li>    
                 </ul>
             </nav>
-            <div id="games">
-                <a href="DStacker.php"><img class="games" id="game1" src="images/DStacker.png"></a><br>
-                <a href=""><img id="game2" class="games" src="images/hack_it.png"></a><br>
-                <a href="minesweeper.html"><img id="game3" class="games" src="images/minesweeper.png"></a><br>
-            </div>
+            <h1>Thank you for your purchase! Your key(s) for your newly purchased game(s) can be found in the inbox of the email connected to your account: <?php echo $email; ?>. Be sure to check your spam folder if you do not see it in your inbox!</h1>
             <div id="social_media">
                 <a href="#" ><img class="social_media" src="images/discord.png"></a>
                 <a href="#" ><img class="social_media" src="images/reddit.png"></a>
