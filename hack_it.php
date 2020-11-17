@@ -1,7 +1,7 @@
 <?php
 require_once('database.php');
-$query = "SELECT price FROM games WHERE name = 'DStacker' LIMIT 1";
-$name = 'DStacker';
+$query = "SELECT price FROM games WHERE name = 'Hack_It' LIMIT 1";
+$name = 'Hack_It';
 $statement = $db->prepare($query);
 $statement->execute();
 $price = $statement->fetch();
@@ -20,8 +20,7 @@ $user_id = 1
     </head>
     <body>
         <div id="main">
-            <img id="icon" src="images/icon.png">
-            <img id="title_logo" src="images/title.png"><br>
+            <img id="icon" src="images/icon.png"><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
                     <li class="li_left" id="currPage" ><a href="home.html">Home</a></li>
@@ -38,13 +37,10 @@ $user_id = 1
                 </ul>
             </nav>
             <div id="game_description">
-                <img id="game" src="images/DStacker.png"><br>
-                <h1>DStacker</h1>
+                <img src="images/hack_it.png"><br>
+                <h1>Hack_It;</h1>
                 <p>
-                    DStacker, short for DoubleStacker, is a fresh take on the popular game Tetris&reg where shapes fall to both sides simultaneously instead of just one side. 
-                    It's double the fun and double the difficulty! 
-                    For fun with friends, one person can take control of each side, and players can swap out shapes with each other to maximize their points and ensure victory! 
-                    Buy now!
+                    Wanna be a Hacker, but scared it's illegal? No problem! With <em>Hack_It;</em>, it is legally safe! You play as a hacker going through each security level, infiltrating someone's personal information which will lead you to gain full control of their PC. Evil indeed. Solve puzzles as you unlock each layer of security and find out what secrets are hidden in your victim's computer. Don't wait; Evil awaits!
                 </p>
                 <h2>Price: $<?php echo reset($price); ?></h2>
                 <form action="add_to_cart.php" method="post">
