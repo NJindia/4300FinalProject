@@ -1,11 +1,14 @@
 <?php
-require_once('database.php');
+
+include('database.php');
+$userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
+
 
 $query = "SELECT * FROM user_info WHERE id = '1'";
 $info = $db->query($query);
 $info = $info->fetch();
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,13 +59,16 @@ $info = $info->fetch();
                     </form>
                 </div><br>
                 <div id="emailAndPass">
-                    <form action="editEmailAndPass.php" method="post">
+                    <form action="editEmailAndPassPHP.php" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
                         <p><strong>Email:</strong>
-                            <?php echo $info['email']; ?>
+                            <input type="text" placeholder="<?php echo $info['email'] ?>" name="email"><br>
                         </p>
-                        <p><strong>Password:</strong> *****</p>
-                        <input type="submit" value="Edit E-Mail and Password">
+                        <p><strong>Password:</strong><br>
+                            <input type="text" placeholder="Enter Current Password" name="currPass"><br>
+                            <input type="text" placeholder="Enter New Password" name="password"><br>
+                        </p>
+                        <input type="submit" value="Save">
                     </form>
                 </div><br>
                 <div id="addressAndPayment">

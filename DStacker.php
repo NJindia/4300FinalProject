@@ -20,7 +20,8 @@ $user_id = 1
     </head>
     <body>
         <div id="main">
-            <img id="icon" src="images/icon.png"><br>
+            <img id="icon" src="images/icon.png">
+            <img id="title_logo" src="images/title.png"><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
                     <li class="li_left" id="currPage" ><a href="home.html">Home</a></li>
@@ -37,7 +38,7 @@ $user_id = 1
                 </ul>
             </nav>
             <div id="game_description">
-                <img src="images/DStacker.png"><br>
+                <img id="game" src="images/DStacker.png"><br>
                 <h1>DStacker</h1>
                 <p>
                     DStacker, short for DoubleStacker, is a fresh take on the popular game Tetris&reg where shapes fall to both sides simultaneously instead of just one side. 

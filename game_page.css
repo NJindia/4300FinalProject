@@ -1,4 +1,5 @@
 h1 {color:white;font-size:500%;}
-#game_description {text-align: center;margin-right: 25em;margin-left: 25em;margin-top: 8em;}
+#game_description {text-align: center; width: 80%; margin-top: 5%; margin-left: auto;margin-right: auto;}
+#game {width:100%;}
 p {color: white; font-size: 200%;}
 h2 {color:white; font-size: 300%;}
