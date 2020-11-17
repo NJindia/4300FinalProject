@@ -76,35 +76,40 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                 </div><br>
                 <div id="addressAndPayment">
-                <div id="addressAndPayment">
-                    <form action="editAddressAndPaymentPHP.php" method="post">
-                        <h2 class="infoHeaders">Address and Payment Information</h2>
-                        <p><strong>Address:</strong><br>
-                            <p><strong>Street:</strong>
-                                <input type="text" placeholder="<?php echo $addressInfo['street'] ?>" name="street"><br>
-                            </p>
-                            <p><strong>City:</strong>
-                                <input type="text" placeholder="<?php echo $addressInfo['city'] ?>" name="city"><br>
-                            </p>
-                            <p><strong>State:</strong>
-                                <input type="text" placeholder="<?php echo $addressInfo['state'] ?>" name="state"><br>
-                            </p>
-                            <p><strong>Zipcode:</strong>
-                                <input type="text" placeholder="<?php echo $addressInfo['zipcode'] ?>" name="zipcode"><br>
-                            </p>
+                    <div id="addressAndPayment">
+                        <form action="editAddressAndPaymentPHP.php" method="post">
+                            <h2 class="infoHeaders">Address and Payment Information</h2>
+                            <p><strong>Address:</strong><br>
+                                <p><strong>Street:</strong>
+                                    <input type="text" placeholder="<?php echo $addressInfo['street'] ?>" name="street"><br>
+                                </p>
+                                <p><strong>City:</strong>
+                                    <input type="text" placeholder="<?php echo $addressInfo['city'] ?>" name="city"><br>
+                                </p>
+                                <p><strong>State:</strong>
+                                    <input type="text" placeholder="<?php echo $addressInfo['state'] ?>" name="state"><br>
+                                </p>
+                                <p><strong>Zipcode:</strong>
+                                    <input type="text" placeholder="<?php echo $addressInfo['zipcode'] ?>" name="zipcode"><br>
+                                </p>
+                            </p><br>
                             <p><strong>Payment Information:</strong><br>
-                            <input type="text" placeholder="<?php echo $paymentInfo['card_type']?> 
-                            <?php echo $paymentInfo['card_num']?>" name="zipcode"><br>
+                                <p><strong>Card Type:</strong>
+                                    <input type="text" placeholder="<?php echo $paymentInfo['card_type'] ?>">
+                                </p>
+                                <p><strong>Card Number:</strong>
+                                    <input type="text" placeholder="<?php echo $paymentInfo['card_num'] ?>">
+                                </p>
                             </p>
                             <input type="submit" value="Save">
-                    </form>
+                        </form>
 
+                    </div>
                 </div>
             </div>
+
+
         </div>
-
-
-    </div>
 
 </body>
 <footer>
