@@ -8,6 +8,14 @@ $query = "SELECT * FROM user_info WHERE id = '1'";
 $info = $db->query($query);
 $info = $info->fetch();
 
+$query = "SELECT * FROM address WHERE user_id = '1'";
+$addressInfo = $db->query($query);
+$addressInfo = $addressInfo->fetch();
+
+$query = "SELECT * FROM payment WHERE user_id = '1'";
+$paymentInfo = $db->query($query);
+$paymentInfo = $paymentInfo->fetch();
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +40,7 @@ $info = $info->fetch();
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                        <li><a href="">My Account</a></li>
+                        <li><a href="myAccount.php">My Account</a></li>
                         <li><a href="">Log Out</a></li>
                     </ul>
                 </li>
@@ -69,17 +77,19 @@ $info = $info->fetch();
                     </form>
                 </div><br>
                 <div id="addressAndPayment">
-                    <form action="" method="post">
+                    <form action="editAddressAndPayment.php" method="post">
                         <h2 class="infoHeaders">Address and Payment Information</h2>
                         <p><strong>Address:</strong><br>
-                            1 Way St, Athens, GA 30605
+                            <?php echo $addressInfo['street']; ?>
+                            <?php echo $addressInfo['city']; ?>,
+                            <?php echo $addressInfo['state']; ?>,
+                            <?php echo $addressInfo['zipcode']; ?>
                         </p>
                         <p><strong>Payment Information:</strong><br>
-                            Visa XXXX-XXXX-XXXX-1234
+                            <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
                         </p>
                         <input type="submit" value="Edit Address and Payment Information">
                     </form>
-
                 </div>
             </div>
         </div>

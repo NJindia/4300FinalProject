@@ -1,5 +1,7 @@
 <?php
-require_once('database.php');
+
+include('database.php');
+$userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
 $query = "SELECT * FROM user_info WHERE id = '1'";
 $info = $db->query($query);
@@ -14,8 +16,6 @@ $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@ $paymentInfo = $paymentInfo->fetch();
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                        <li><a href="myAccount.php">My Account</a></li>
+                        <li><a href="">My Account</a></li>
                         <li><a href="">Log Out</a></li>
                     </ul>
                 </li>
@@ -76,18 +76,27 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                 </div><br>
                 <div id="addressAndPayment">
-                    <form action="editAddressAndPayment.php" method="post">
+                <div id="addressAndPayment">
+                    <form action="editAddressAndPaymentPHP.php" method="post">
                         <h2 class="infoHeaders">Address and Payment Information</h2>
                         <p><strong>Address:</strong><br>
-                            <?php echo $addressInfo['street']; ?>
-                            <?php echo $addressInfo['city']; ?>,
-                            <?php echo $addressInfo['state']; ?>,
-                            <?php echo $addressInfo['zipcode']; ?>
-                        </p>
-                        <p><strong>Payment Information:</strong><br>
-                            <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
-                        </p>
-                        <input type="submit" value="Edit Address and Payment Information">
+                            <p><strong>Street:</strong>
+                                <input type="text" placeholder="<?php echo $addressInfo['street'] ?>" name="street"><br>
+                            </p>
+                            <p><strong>City:</strong>
+                                <input type="text" placeholder="<?php echo $addressInfo['city'] ?>" name="city"><br>
+                            </p>
+                            <p><strong>State:</strong>
+                                <input type="text" placeholder="<?php echo $addressInfo['state'] ?>" name="state"><br>
+                            </p>
+                            <p><strong>Zipcode:</strong>
+                                <input type="text" placeholder="<?php echo $addressInfo['zipcode'] ?>" name="zipcode"><br>
+                            </p>
+                            <p><strong>Payment Information:</strong><br>
+                            <input type="text" placeholder="<?php echo $paymentInfo['card_type']?> 
+                            <?php echo $paymentInfo['card_num']?>" name="zipcode"><br>
+                            </p>
+                            <input type="submit" value="Save">
                     </form>
 
                 </div>
