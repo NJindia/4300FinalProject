@@ -2,6 +2,9 @@
 require_once('database.php');
 #$email = filter_input(INPUT_POST, 'email');
 $email = 'johndoe.gmail.com';
+
+$query = "DELETE FROM cart WHERE user_id='1'";
+    $db->exec($query);
 ?>
 
 
@@ -17,7 +20,7 @@ $email = 'johndoe.gmail.com';
     </head>
     <body>
         <div id="main">
-                        <a href="home.html"><img id="icon" src="images/icon.png"></a>
+            <a href="home.html"><img id="icon" src="images/icon.png"></a>
             <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
             <nav id="text_nav" class="top_nav">
                 <ul>

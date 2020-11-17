@@ -4,6 +4,9 @@
     $query = "SELECT * FROM cart WHERE user_id='1'";
     $review = $db->query($query);
 
+    $query = "SELECT * FROM payment WHERE user_id='1'";
+    $payment = $db->query($query);
+
     $sum=0.00;
     foreach($review as $item):
         $sum += $item['price'];
@@ -24,7 +27,7 @@
     </head>
     <body>
         <div id="main">
-                        <a href="home.html"><img id="icon" src="images/icon.png"></a>
+            <a href="home.html"><img id="icon" src="images/icon.png"></a>
             <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
@@ -47,9 +50,14 @@
                 <fieldset id="payment">
                     <legend class="title">1. Payment Method</legend>
                     <form>
-                        <input type="submit" class="select" name="credit" value="Change">
-                        <label>Credit Card:</label><br>
+                        <input type="button" onclick="location.href='https://google.com';" id="change" value="Change" />
+                        <label id="card_title">Credit Card:</label>
                     </form>
+                    <p id="card">
+                        <?php foreach($payment as $card): ?>
+                            <?php echo 'Current Card: '.$card['type']. ' ending in '.substr($card['card_num'],-4); ?>
+                        <?php endforeach; ?>
+                        </p>
                 </fieldset>
 
                 <fieldset id="summary">
@@ -67,13 +75,10 @@
                             <td>Balance:</td>
                             <td><?php echo '$' . number_format($sum,2,'.',',');?></td>
                         </tr>
-                        <tr>
-                            <td>Payment Method:</td>
-                            <td></td>
-                        </tr>
                     </table>
-                    <form action="process_order.php" method="post">
-                        <input type="hidden" name="total" value="">
+                        <p class="total" id="method">Payment Method:</p>
+                        <p class="total" id="code"><?php echo $card['type']. ' ending in '.substr($card['card_num'],-4);?> </p>
+                    <form action="post_order.php" method="post">
                         <input id="buy" type="submit" value="Purchase">
                     </form>
                 </fieldset>
@@ -88,15 +93,20 @@
                             </tr>
                         <?php endforeach; ?>  
                     </table>
-                    <a href="">Edit Cart</a>
-                    <p>Total: <?php echo '$' . number_format($sum,2,'.',',');?></p>
+                    <p id="sum">Total: <?php echo '$' . number_format($sum,2,'.',',');?></p>
+                    <form id="edit_cart" >
+                        <input type="button" onclick="location.href='https://google.com';" value="Edit Cart" />
+                    </form>
                 </fieldset> 
             </div>
-            
-        </div>
-        
+            <div id="social_media">
+                <a href="#" ><img class="social_media" src="images/discord.png"></a>
+                <a href="#" ><img class="social_media" src="images/reddit.png"></a>
+                <a href="#" ><img class="social_media" src="images/twitter.png"></a>
+                <a href="#" ><img class="social_media" src="images/instagram.png"></a>
+                <br>
+                <p>&copy; Smoke Games</p>
+            </div>
+        </div> 
     </body>
-    <footer>
-        
-    </footer>
 </html>
