@@ -16,7 +16,6 @@ $paymentInfo = $paymentInfo->fetch();
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +77,7 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                 </div><br>
                 <div id="addressAndPayment">
-                    <form action="editAddressAndPayment.php" method="post">
+                    <form action="editAddress.php" method="post">
                         <h2 class="infoHeaders">Address and Payment Information</h2>
                         <p><strong>Address:</strong><br>
                             <?php echo $addressInfo['street']; ?>
@@ -86,22 +85,25 @@ $paymentInfo = $paymentInfo->fetch();
                             <?php echo $addressInfo['state']; ?>,
                             <?php echo $addressInfo['zipcode']; ?>
                         </p>
+                        <input type="submit" value="Edit Address Information">
+                    </form>
+                    <form action="editPayment.php" method="post">
                         <p><strong>Payment Information:</strong><br>
                             <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
                         </p>
-                        <input type="submit" value="Edit Address and Payment Information">
+                        <input type="submit" value="Edit Payment Information">
                     </form>
 
                 </div>
             </div>
         </div>
         <div id="social_media">
-                <a href="#" ><img class="social_media" src="images/discord.png"></a>
-                <a href="#" ><img class="social_media" src="images/reddit.png"></a>
-                <a href="#" ><img class="social_media" src="images/twitter.png"></a>
-                <a href="#" ><img class="social_media" src="images/instagram.png"></a>
-                <br>
-                <p>&copy; Smoke Games</p>
+            <a href="#"><img class="social_media" src="images/discord.png"></a>
+            <a href="#"><img class="social_media" src="images/reddit.png"></a>
+            <a href="#"><img class="social_media" src="images/twitter.png"></a>
+            <a href="#"><img class="social_media" src="images/instagram.png"></a>
+            <br>
+            <p>&copy; Smoke Games</p>
         </div>
     </div>
 </body>

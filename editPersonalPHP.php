@@ -17,20 +17,20 @@ else if (($first == "") && ($last != "") && ($phone == "")) {
     $db->exec($query);
 } 
 else if (($first == "") && ($last == "") && ($phone != "")) {
-    $query = "UPDATE user_info SET phone = $phone WHERE id = '1'";
+    $query = "UPDATE user_info SET phone = '$phone' WHERE id = '1'";
     $db->exec($query);
     echo "what up";
 } 
 else if (($first != "") && ($last != "") && ($phone != "")) {
-    $query = "UPDATE user_info SET first = '$first', last = '$last', phone = $phone WHERE id = '1'";
+    $query = "UPDATE user_info SET first = '$first', last = '$last', phone = '$phone' WHERE id = '1'";
     $db->exec($query);
 } 
 else if (($first == "") && ($last != "") && ($phone != "")) {
-    $query = "UPDATE user_info SET last = '$last', phone = $phone WHERE id = '1'";
+    $query = "UPDATE user_info SET last = '$last', phone = '$phone' WHERE id = '1'";
     $db->exec($query);
 } 
 else if (($first != "") && ($last == "") && ($phone != "")) {
-    $query = "UPDATE user_info SET first = '$first', phone = $phone WHERE id = '1'";
+    $query = "UPDATE user_info SET first = '$first', phone = '$phone' WHERE id = '1'";
     $db->exec($query);
 }
 else if (($first != "") && ($last != "") && ($phone == "")) {

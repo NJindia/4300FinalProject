@@ -77,7 +77,7 @@ $paymentInfo = $paymentInfo->fetch();
                 </div><br>
                 <div id="addressAndPayment">
                     <div id="addressAndPayment">
-                        <form action="editAddressAndPaymentPHP.php" method="post">
+                        <form action="editAddressPHP.php" method="post">
                             <h2 class="infoHeaders">Address and Payment Information</h2>
                             <p><strong>Address:</strong><br>
                                 <p><strong>Street:</strong>
@@ -92,18 +92,15 @@ $paymentInfo = $paymentInfo->fetch();
                                 <p><strong>Zipcode:</strong>
                                     <input type="text" placeholder="<?php echo $addressInfo['zipcode'] ?>" name="zipcode"><br>
                                 </p>
-                            </p><br>
-                            <p><strong>Payment Information:</strong><br>
-                                <p><strong>Card Type:</strong>
-                                    <input type="text" placeholder="<?php echo $paymentInfo['card_type'] ?>">
-                                </p>
-                                <p><strong>Card Number:</strong>
-                                    <input type="text" placeholder="<?php echo $paymentInfo['card_num'] ?>">
-                                </p>
+                                <input type="submit" value="Save">
                             </p>
-                            <input type="submit" value="Save">
                         </form>
-
+                        <form action="editPaymentPHP.php" method="post">
+                            <p><strong>Payment Information:</strong><br>
+                                <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
+                            </p>
+                            <input type="submit" value="Edit Payment Information">
+                        </form>
                     </div>
                 </div>
             </div>
