@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+    SESSION_start(); ?> <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,16 +12,22 @@
 
 <body>
     <div id="main">
-        <a href="home.html"><img id="icon" src="images/icon.png"></a>
-        <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
+        <a href="home.php"><img id="icon" src="images/icon.png"></a>
+        <a href="home.php"><img id="title_logo" src="images/title.png"></a><br>
         <nav id="text_nav" class="top_nav">
             <ul>
-                <li class="li_left" ><a href="home.html">Home</a></li>
-                <li class="li_left"><a href="about_us.html">About Us</a></li>
-                <li class="li_left" id="currPage"><a href="contact_us.html">Contact Us</a></li>
+                <li class="li_left" ><a href="home.php">Home</a></li>
+                <li class="li_left"><a href="about_us.php">About Us</a></li>
+                <li class="li_left" id="currPage"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                        <?php 
+                            if(!isset($_SESSION['first'])){?>
+                            <?php 
+                            if(!isset($_SESSION['first'])){?>
+                            <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                            <?php } ?>
+                            <?php } ?>
                         <li><a href="myAccount.php">My Account</a></li>
                         <li><a href="">Log Out</a></li>
                     </ul>
