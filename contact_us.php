@@ -29,7 +29,10 @@
                             <?php } ?>
                             <?php } ?>
                         <li><a href="myAccount.php">My Account</a></li>
-                        <li><a href="">Log Out</a></li>
+                        <?php 
+                            if(isset($_SESSION['first'])){?>
+                            <li><a href="logout.php">Log Out</a></li>
+                            <?php } ?>
                     </ul>
                 </li>
                 <li class="li_right"><img id="cart" src="images/cart.png"></li>

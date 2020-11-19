@@ -57,7 +57,7 @@ require_once('database.php');
                 <li class="li_left"><a href="home.php">Home</a></li>
                 <li class="li_left"><a href="about_us.php">About Us</a></li>
                 <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
-                <li class="li_right" id="currPage"><img id="pfp" src="images/profilepic.png">
+                <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <?php 
                             if(!isset($_SESSION['first'])){?>
@@ -67,7 +67,10 @@ require_once('database.php');
                             <?php } ?>
                             <?php } ?>
                         <li><a href="myAccount.php">My Account</a></li>
-                        <li><a href="">Log Out</a></li>
+                        <?php 
+                            if(isset($_SESSION['first'])){?>
+                            <li><a href="logout.php">Log Out</a></li>
+                            <?php } ?>
                     </ul>
                 </li>
                 <li class="li_right"><img id="cart" src="images/cart.png"></li>

@@ -35,7 +35,10 @@ $query = "DELETE FROM cart WHERE user_id='1'";
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
                             <?php } ?>
                             <li><a href="myAccount.php">My Account</a></li>
-                            <li><a href="">Log Out</a></li>
+                            <?php 
+                            if(isset($_SESSION['first'])){?>
+                            <li><a href="logout.php">Log Out</a></li>
+                            <?php } ?>
                         </ul>
                     </li>
                     <li class="li_right"><img id="cart" src="images/cart.png"></li>    

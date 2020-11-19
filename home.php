@@ -18,7 +18,14 @@
             <div class="white"><p>
                 <?php if(isset($_SESSION['first'])) {
                 echo 'Welcome '. $_SESSION['first']; 
-                }?></p>
+                }?>
+                <?php if(!isset($_SESSION['first'])) {
+                ?> <a id="signin" href="login.php">Sign In</a>
+                <?php }?></p>
+                
+            
+            </p>
+
             </div>
     
             <nav id="text_nav" class="top_nav">
