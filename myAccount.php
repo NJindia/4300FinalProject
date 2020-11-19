@@ -93,7 +93,6 @@ $paymentInfo = $paymentInfo->fetch();
                         </p>
                         <input type="submit" value="Edit Payment Information">
                     </form>
-
                 </div>
             </div>
         </div>

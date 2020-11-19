@@ -81,21 +81,21 @@ $paymentInfo = $paymentInfo->fetch();
                             <h2 class="infoHeaders">Address and Payment Information</h2>
                             <p><strong>Address:</strong><br>
                                 <p><strong>Street:</strong>
-                                    <input type="text" placeholder="<?php echo $addressInfo['street'] ?>" name="street"><br>
+                                    <input type="text" placeholder="<?php echo $addressInfo['street'] ?>" name="street">
                                 </p>
                                 <p><strong>City:</strong>
-                                    <input type="text" placeholder="<?php echo $addressInfo['city'] ?>" name="city"><br>
+                                    <input type="text" placeholder="<?php echo $addressInfo['city'] ?>" name="city">
                                 </p>
                                 <p><strong>State:</strong>
-                                    <input type="text" placeholder="<?php echo $addressInfo['state'] ?>" name="state"><br>
+                                    <input type="text" placeholder="<?php echo $addressInfo['state'] ?>" name="state">
                                 </p>
                                 <p><strong>Zipcode:</strong>
-                                    <input type="text" placeholder="<?php echo $addressInfo['zipcode'] ?>" name="zipcode"><br>
+                                    <input type="text" placeholder="<?php echo $addressInfo['zipcode'] ?>" name="zipcode">
                                 </p>
                                 <input type="submit" value="Save">
                             </p>
                         </form>
-                        <form action="editPaymentPHP.php" method="post">
+                        <form action="editPayment.php" method="post">
                             <p><strong>Payment Information:</strong><br>
                                 <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
                             </p>

@@ -14,8 +14,13 @@ $newPass=$_POST['newPass'];
 
 
 if ($currentPass == $info['password']) {
-    if($email == "") {
+    
+    if(($email == "") && ($pass != "")) {
         $query="UPDATE user_info SET password = '$newPass' WHERE id = '1'" ;
+        $db->exec($query);
+    }
+    else if(($email != "") && ($pass == "")){
+        $query="UPDATE user_info SET email = '$email' WHERE id = '1'" ;
         $db->exec($query);
     }
     else {

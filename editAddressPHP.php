@@ -13,3 +13,5 @@ $db->exec($query);
 
 
 include('myAccount.php');
+
+?>

@@ -69,18 +69,20 @@ $paymentInfo = $paymentInfo->fetch();
                 <div id="emailAndPass">
                     <form action="editEmailAndPassPHP.php" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
+                        <p><strong>Please enter current password for changes to be made:</strong><br>
+                            <input type="text" placeholder="Enter Current Password" name="currentPass"><br>
+                        </p>
                         <p><strong>Email:</strong>
-                            <input type="text" placeholder="<?php echo $info['email'] ?>" name="email"><br>
+                            <input type="text" placeholder="Enter New E-Mail" name="email"><br>
                         </p>
                         <p><strong>Password:</strong><br>
-                            <input type="text" placeholder="Enter Current Password" name="currentPass"><br>
                             <input type="text" placeholder="Enter New Password" name="newPass"><br>
                         </p>
                         <input type="submit" value="Save">
                     </form>
                 </div><br>
                 <div id="addressAndPayment">
-                    <form action="editAddressAndPayment.php" method="post">
+                    <form action="editAddress.php" method="post">
                         <h2 class="infoHeaders">Address and Payment Information</h2>
                         <p><strong>Address:</strong><br>
                             <?php echo $addressInfo['street']; ?>
@@ -88,10 +90,13 @@ $paymentInfo = $paymentInfo->fetch();
                             <?php echo $addressInfo['state']; ?>,
                             <?php echo $addressInfo['zipcode']; ?>
                         </p>
+                        <input type="submit" value="Edit Address Information">
+                    </form>
+                    <form action="editPayment.php" method="post">
                         <p><strong>Payment Information:</strong><br>
                             <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
                         </p>
-                        <input type="submit" value="Edit Address and Payment Information">
+                        <input type="submit" value="Edit Payment Information">
                     </form>
                 </div>
             </div>

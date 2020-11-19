@@ -39,3 +39,5 @@ else if (($first != "") && ($last != "") && ($phone == "")) {
 } 
 
 include('myAccount.php');
+
+?>

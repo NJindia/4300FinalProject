@@ -3,7 +3,6 @@
 include('database.php');
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
-
 $query = "SELECT * FROM user_info WHERE id = '1'";
 $info = $db->query($query);
 $info = $info->fetch();
@@ -40,7 +39,7 @@ $paymentInfo = $paymentInfo->fetch();
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                        <li><a href="myAccount.php">My Account</a></li>
+                        <li><a href="">My Account</a></li>
                         <li><a href="">Log Out</a></li>
                     </ul>
                 </li>
@@ -52,22 +51,22 @@ $paymentInfo = $paymentInfo->fetch();
         <div id="myAccount">
             <div id="accountInfo">
                 <div id="personalInfo">
-                    <form action="editPersonalPHP.php" method="post">
+                    <form action="editPersonal.php" method="post">
                         <h2 class="infoHeaders">Personal Information</h2>
                         <p><strong>First Name:</strong>
-                            <input type="text" placeholder="<?php echo $info['first'] ?>" name="first"><br>
+                            <?php echo $info['first']; ?>
                         </p>
                         <p><strong>Last Name:</strong>
-                            <input type="text" placeholder="<?php echo $info['last'] ?>" name="last"><br>
+                            <?php echo $info['last']; ?>
                         </p>
                         <p><strong>Phone Number:</strong>
-                        <input type="text" placeholder="<?php echo $info['phone'] ?>" name="phone"><br>
+                            <?php echo $info['phone']; ?>
                         </p>
-                        <input type="submit" name="Save"><br>
+                        <input type="submit" value="Edit Personal Information">
                     </form>
                 </div><br>
                 <div id="emailAndPass">
-                <form action="editEmailAndPass.php" method="post">
+                    <form action="editEmailAndPass.php" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
                         <p><strong>Email:</strong>
                             <?php echo $info['email']; ?>
@@ -77,28 +76,37 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                 </div><br>
                 <div id="addressAndPayment">
-                    <form action="editAddress.php" method="post">
-                        <h2 class="infoHeaders">Address and Payment Information</h2>
-                        <p><strong>Address:</strong><br>
-                            <?php echo $addressInfo['street']; ?>
-                            <?php echo $addressInfo['city']; ?>,
-                            <?php echo $addressInfo['state']; ?>,
-                            <?php echo $addressInfo['zipcode']; ?>
-                        </p>
-                        <input type="submit" value="Edit Address Information">
-                    </form>
-                    <form action="editPayment.php" method="post">
-                        <p><strong>Payment Information:</strong><br>
-                            <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
-                        </p>
-                        <input type="submit" value="Edit Payment Information">
-                    </form>
+                    <div id="addressAndPayment">
+                        <form action="editAddress.php" method="post">
+                            <h2 class="infoHeaders">Address and Payment Information</h2>
+                            <p><strong>Address:</strong><br>
+                                <?php echo $addressInfo['street']; ?>
+                                <?php echo $addressInfo['city']; ?>,
+                                <?php echo $addressInfo['state']; ?>,
+                                <?php echo $addressInfo['zipcode']; ?>
+                            </p>
+                            <input type="submit" value="Edit Address Information">
+                        </form>
+                        <form action="editPaymentPHP.php" method="post">
+                            <p><strong>Change Payment Information:</strong><br>
+                                <p><strong>Card Type:</strong>
+                                    <input type="text" placeholder="<?php echo $paymentInfo['card_type'] ?>" name="card_type">
+                                </p>
+                                <p><strong>Card Number:</strong>
+                                    <input type="text" placeholder="<?php echo $paymentInfo['card_num'] ?>" name="card_num">
+                                </p>
+                                <p><strong>Expiration:</strong>
+                                    <input type="text" placeholder="MM/DD/YYYY" name="expiration">
+                                </p>
+                            </p>
+                            <input type="submit" value="Save">
+                        </form>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-
-
-    </div>
 
 </body>
 <footer>
