@@ -3,10 +3,16 @@ img{
     height: auto;
 }
 
-td, p, h1{
+td,h1{
     text-align: center;
-    color: white;
+    color:rgb(196, 211, 221);
 }
+
+p, #text h1{
+    text-align: center;
+    color: black;
+}
+
 
 #intro{
     margin-top: 3%;
@@ -19,5 +25,13 @@ p{
 }
 
 a{
-    color: gold;
+    color: rgb(12, 61, 121);
+}
+
+
+#text{
+    margin-top: 10px;
+    background-color: rgba(124, 160, 192, 0.906);
+    padding-top: 20px;
+    padding-bottom: 50px;
 }

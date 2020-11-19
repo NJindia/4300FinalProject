@@ -47,15 +47,17 @@
                             <td>Alex Nguyen</td>
                         </tr>
                     </table>
-                    <p id="intro">Hi there, fellow humans! We created this website to act as an Indie Game Developer's video game digital distribution service. We created three mock-up games that do NOT exist. Our team consists of junioir and senior CS students as UGA. We hope you enjoy your stay and if you have any questions, please <a href="contact_us.php">contact us!</a></p>
-                    <h1>Mission Statement</h1>
-                    <p>We strive to earn an A on our final project and we hope that our website is worthy of such grade. Our goal is to continue making games that
-                        is suitable for all players of any age. We value our customers, contributors, and developers, and we will continue to show this image of ourselves.
-                        Thank you for your support!
-                    </p>
-                    <h1>Disclaimer</h1>
-                    <p>Our company and our offered games are works of fiction and do not exist in the real world. We are not associated with any real company.
-                        Please do not consider it as such.</p>
+                    <div id="text">
+                        <p id="intro">Hi there, fellow humans! We created this website to act as an Indie Game Developer's video game digital distribution service. We created three mock-up games that do NOT exist. Our team consists of junioir and senior CS students as UGA. We hope you enjoy your stay and if you have any questions, please <a href="contact_us.php">contact us!</a></p>
+                        <h1>Mission Statement</h1>
+                        <p>We strive to earn an A on our final project and we hope that our website is worthy of such grade. Our goal is to continue making games that
+                            is suitable for all players of any age. We value our customers, contributors, and developers, and we will continue to show this image of ourselves.
+                            Thank you for your support!
+                        </p>
+                        <h1>Disclaimer</h1>
+                        <p>Our company and our offered games are works of fiction and do not exist in the real world. We are not associated with any real company.
+                            Please do not consider it as such.</p>
+                    </div>
                 </div>
                 <div id="social_media">
                     <a href="#" ><img class="social_media" src="images/discord.png"></a>
