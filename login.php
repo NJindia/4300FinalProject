@@ -13,28 +13,29 @@ require_once('database.php');
 // $paymentInfo = $db->query($query);
 // $paymentInfo = $paymentInfo->fetch();
 
-if(isset($_POST['email'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+// if(isset($_POST['email'])) {
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
 
-    $query="select * from user_info where email='".$email."'AND password='".$password."' 
-    limit 1";
+//     $query="select * from user_info where email='".$email."'AND password='".$password."' 
+//     limit 1";
 
-    $result= $db->query($query);
-    $info= $result->fetch();
+//     $result= $db->query($query);
+//     $info= $result->fetch();
 
-    if($info>0) {
-        echo "You Have Successfully Logged In";
-        exit();
-    }
-    else{
-        echo "The Password Entered is Incorrect";
-    }
-}
-?>
+//     if($info>0) {
+//         echo "You Have Successfully Logged In";
+//         exit();
+//     }
+//     else{
+//         echo "The Password Entered is Incorrect";
+//     }
+// }
+// ?>
 
 
-<!DOCTYPE html>
+<?php
+    SESSION_start(); ?> <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,18 +50,27 @@ if(isset($_POST['email'])) {
 <body>
     <div id="main">
         <img id="icon" src="images/icon.png">
-        <a href="home.html"><img id="title_logo" src="images/title.png"></a><br>
+        <a href="home.php"><img id="title_logo" src="images/title.png"></a><br>
         <!--Start Navigation Bar-->
         <nav id="text_nav" class="top_nav">
             <ul>
-                <li class="li_left"><a href="home.html">Home</a></li>
-                <li class="li_left"><a href="about_us.html">About Us</a></li>
-                <li class="li_left"><a href="contact_us.html">Contact Us</a></li>
-                <li class="li_right" id="currPage"><img id="pfp" src="images/profilepic.png">
+                <li class="li_left"><a href="home.php">Home</a></li>
+                <li class="li_left"><a href="about_us.php">About Us</a></li>
+                <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
+                <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                        <?php 
+                            if(!isset($_SESSION['first'])){?>
+                            <?php 
+                            if(!isset($_SESSION['first'])){?>
+                            <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                            <?php } ?>
+                            <?php } ?>
                         <li><a href="myAccount.php">My Account</a></li>
-                        <li><a href="">Log Out</a></li>
+                        <?php 
+                            if(isset($_SESSION['first'])){?>
+                            <li><a href="logout.php">Log Out</a></li>
+                            <?php } ?>
                     </ul>
                 </li>
                 <li class="li_right"><img id="cart" src="images/cart.png"></li>
@@ -74,7 +84,7 @@ if(isset($_POST['email'])) {
                 <h1 class ="black no_top_margin">Welcome to Smoke Games</h1>
             </div>
 
-                <form method="POST" action="">
+                <form method="POST" action="process_login.php">
                 <fieldset id="login_fieldset">
                     <div class="center_div">
                         <div class="name_div">
@@ -86,6 +96,14 @@ if(isset($_POST['email'])) {
                         <div class="name_div">
                         <button class="login_button" type="submit" id="submit">Log In </button>
                         </div>
+                        <br>
+                        <?php 
+                            if(@$_GET['Invalid']==true) { ?>
+                                <div class="red"><?php echo $_GET['Invalid'];
+
+                            }
+
+                        ?></div>
                         <a href="signUp.php" style="text-decoration:none;">  <p class="slategrey bold">Not a member yet? Sign up </p> </a>
                     </div><br>
                 </form>
