@@ -35,10 +35,10 @@ $paymentInfo = $paymentInfo->fetch();
             <ul>
                 <li class="li_left" id="currPage"><a href="home.html">Home</a></li>
                 <li class="li_left"><a href="about_us.html">About Us</a></li>
-                <li class="li_left"><a href="">Contact Us</a></li>
+                <li class="li_left"><a href="contact_us.html">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                        <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
                         <li><a href="">My Account</a></li>
                         <li><a href="">Log Out</a></li>
                     </ul>
