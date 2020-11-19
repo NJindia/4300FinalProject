@@ -23,7 +23,7 @@ $paymentInfo = $paymentInfo->fetch();
 
 <head>
     <meta charset="utf8">
-    <title>TITLE</title>
+    <title>My Account</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="myAccount.css">
 </head>

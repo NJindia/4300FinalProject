@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf8">
-    <title>TITLE</title>
+    <title>Mine Sweeper</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="about_us.css">
