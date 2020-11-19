@@ -54,7 +54,7 @@
                 <fieldset id="payment">
                     <legend class="title">1. Payment Method</legend>
                     <form>
-                        <input type="button" onclick="location.href='https://google.com';" id="change" value="Change" />
+                        <input type="button" onclick="location.href='editPayment.php';" id="change" value="Change" />
                         <label id="card_title">Credit Card:</label>
                     </form>
                     <p id="card">
