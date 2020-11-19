@@ -70,14 +70,22 @@ $paymentInfo = $paymentInfo->fetch();
                     <form action="editEmailAndPassPHP.php" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
                         <p><strong>Please enter current password for changes to be made:</strong><br>
-                        <strong>Current Password:</strong>
                             <input type="text" placeholder="Enter Current Password" name="currentPass"><br>
+                            <?php if (isset($currentPass_error)) { ?>
+                                <span class="error"><?php echo $currentPass_error ?></span>
+                            <?php } ?>
                         </p>
                         <p><strong>Email:</strong>
                             <input type="text" placeholder="Enter New E-Mail" name="email"><br>
+                            <?php if (isset($email_error)) { ?>
+                                <span class="error"><?php echo $email_error ?></span>
+                            <?php } ?>
                         </p>
                         <p><strong>Password:</strong>
                             <input type="text" placeholder="Enter New Password" name="newPass"><br>
+                            <?php if (isset($newPass_error)) { ?>
+                                <span class="error"><?php echo $newPass_error ?></span>
+                            <?php } ?>
                         </p>
                         <input type="submit" value="Save">
                     </form>

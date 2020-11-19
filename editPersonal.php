@@ -55,15 +55,24 @@ $paymentInfo = $paymentInfo->fetch();
                     <form action="editPersonalPHP.php" method="post">
                         <h2 class="infoHeaders">Personal Information</h2>
                         <p><strong>First Name:</strong>
-                            <input type="text" placeholder="<?php echo $info['first'] ?>" name="first"><br>
+                            <input type="text" placeholder="New First Name" name="first"><br>
+                            <?php if (isset($first_error)) { ?>
+                                <p class="error"><?php echo $first_error ?></p>
+                            <?php } ?>
                         </p>
                         <p><strong>Last Name:</strong>
-                            <input type="text" placeholder="<?php echo $info['last'] ?>" name="last"><br>
+                        <input type="text" placeholder="New Last Name" name="last"><br>
+                            <?php if (isset($last_error)) { ?>
+                                <p class="error"><?php echo $last_error ?></p>
+                            <?php } ?>
                         </p>
                         <p><strong>Phone Number:</strong>
-                        <input type="text" placeholder="<?php echo $info['phone'] ?>" name="phone"><br>
+                        <input type="text" placeholder="New Phone Number" name="phone"><br>
+                            <?php if (isset($phone_error)) { ?>
+                                <p class="error"><?php echo $phone_error ?></p>
+                            <?php } ?>
                         </p>
-                        <input type="submit" name="Save"><br>
+                        <input type="submit" value="Save"><br>
                     </form>
                 </div><br>
                 <div id="emailAndPass">

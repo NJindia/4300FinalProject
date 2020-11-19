@@ -13,6 +13,9 @@
 .info {
     font-weight: bold;
 }
+.error {
+  color: maroon;
+}
 
 /* --- Home.css --- */
 body {
