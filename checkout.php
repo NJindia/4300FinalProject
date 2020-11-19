@@ -59,7 +59,7 @@
                     </form>
                     <p id="card">
                         <?php foreach($payment as $card): ?>
-                            <?php echo 'Current Card: '.$card['type']. ' ending in '.substr($card['card_num'],-4); ?>
+                            <?php echo 'Current Card: '.$card['card_type']. ' ending in '.substr($card['card_num'],-4); ?>
                         <?php endforeach; ?>
                         </p>
                 </fieldset>
@@ -81,7 +81,7 @@
                         </tr>
                     </table>
                         <p class="total" id="method">Payment Method:</p>
-                        <p class="total" id="code"><?php echo $card['type']. ' ending in '.substr($card['card_num'],-4);?> </p>
+                        <p class="total" id="code"><?php echo $card['card_type']. ' ending in '.substr($card['card_num'],-4);?> </p>
                     <form action="post_order.php" method="post">
                         <input id="buy" type="submit" value="Purchase">
                     </form>
