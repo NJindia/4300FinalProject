@@ -134,6 +134,15 @@ img.social_media {
   text-align: center;
   width: 150px;
   height: 30px;
-  margin-top: -10%;
+  margin-top: -7.5%;
   margin-right: 2%;
+}
+
+#signin {
+  color: white;
+  text-decoration: none;
+}
+
+#signin:hover {
+  text-decoration: underline;
 }
