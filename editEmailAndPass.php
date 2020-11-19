@@ -70,12 +70,13 @@ $paymentInfo = $paymentInfo->fetch();
                     <form action="editEmailAndPassPHP.php" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
                         <p><strong>Please enter current password for changes to be made:</strong><br>
+                        <strong>Current Password:</strong>
                             <input type="text" placeholder="Enter Current Password" name="currentPass"><br>
                         </p>
                         <p><strong>Email:</strong>
                             <input type="text" placeholder="Enter New E-Mail" name="email"><br>
                         </p>
-                        <p><strong>Password:</strong><br>
+                        <p><strong>Password:</strong>
                             <input type="text" placeholder="Enter New Password" name="newPass"><br>
                         </p>
                         <input type="submit" value="Save">
