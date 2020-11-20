@@ -23,5 +23,5 @@ else {
         echo $first;
 }
 
-// header("location:contact_us_ty.php");
+header("location:contact_us_ty.php");
 ?>

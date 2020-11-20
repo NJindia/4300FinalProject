@@ -109,3 +109,8 @@ span {
   color: red;
   margin-left: 5px;
 }
+
+.yes_top_margin {
+  position: absolute;
+  margin-top: 1000px;
+}
