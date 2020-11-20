@@ -49,15 +49,24 @@ $substrCardNum = substr($paymentInfo['card_num'], -4);
                         <?php
                         if (!isset($_SESSION['first'])) { ?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+<<<<<<< HEAD
                         <?php } ?>
                         <li><a href="myAccount.php">My Account</a></li>
                         <?php
                         if (isset($_SESSION['first'])) { ?>
+=======
+                            <?php } ?>
+                        <?php 
+                            if(isset($_SESSION['first'])){?><li><a href="myAccount.php">My Account</a></li><?php } ?>
+                        <?php 
+                            if(isset($_SESSION['first'])){?>
+>>>>>>> 23e70f77a46e3792d1ecc120c9af7c1e316a5496
                             <li><a href="logout.php">Log Out</a></li>
                         <?php } ?>
                     </ul>
                 </li>
-                <li class="li_right"><img id="cart" src="images/cart.png"></li>
+                <?php 
+                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>
             </ul>
         </nav>
         <!--End Navigation Bar-->

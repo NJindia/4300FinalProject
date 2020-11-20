@@ -9,8 +9,7 @@ $statement->closeCursor();
 $user_id = 1
 ?>
 
-<?php
-    SESSION_start(); ?> <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf8">
@@ -34,14 +33,16 @@ $user_id = 1
                             if(!isset($_SESSION['first'])){?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
                             <?php } ?>
-                            <li><a href="myAccount.php">My Account</a></li>
+                            <?php 
+                            if(isset($_SESSION['first'])){?><li><a href="myAccount.php">My Account</a></li><?php } ?>
                             <?php 
                             if(isset($_SESSION['first'])){?>
                             <li><a href="logout.php">Log Out</a></li>
                             <?php } ?>
                         </ul>
                     </li>
-                    <li class="li_right"><img id="cart" src="images/cart.png"></li>    
+                    <?php 
+                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>    
                 </ul>
             </nav>
             <div id="game_description">
@@ -55,8 +56,16 @@ $user_id = 1
                     <input type="hidden" name="name" value="<?php echo $name; ?>">
                     <input type="hidden" name="price" value="<?php echo reset($price); ?>">
                     <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                    <input type="image" src="images/add_to_cart.png"><br>
+                    <input type="image" id="add" src="images/add_to_cart.png"><br>
                 </form>
+            </div>
+            <div id="social_media">
+                <a href="#" ><img class="social_media" src="images/discord.png"></a>
+                <a href="#" ><img class="social_media" src="images/reddit.png"></a>
+                <a href="#" ><img class="social_media" src="images/twitter.png"></a>
+                <a href="#" ><img class="social_media" src="images/instagram.png"></a>
+                <br>
+                <p>&copy; Smoke Games</p>
             </div>
         </div>
     </body>
