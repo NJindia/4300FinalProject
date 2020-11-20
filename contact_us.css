@@ -137,6 +137,5 @@ span {
 }
 
 .yes_top_margin {
-  position: absolute;
-  margin-top: 1000px;
+  margin-top: 10px;
 }

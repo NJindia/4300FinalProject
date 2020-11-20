@@ -96,15 +96,15 @@
                     <legend>Payment Information</legend>
                    
                             <label>Card Type: </label>
-                            <input class="reg_input" type="text" name="address" required > <br>  <br>
+                            <input class="reg_input" type="text" name="cardType" required > <br>  <br>
                         
                         
                             <label>Card Number: </label>
-                            <input class="reg_input" type="text" name="city" required > <br>
+                            <input class="reg_input" type="text" name="cardNumber" required > <br>
                         <br>
                         
                             <label>Expiration: </label>
-                            <input class="reg_input" type="text" name="state" required > <br>
+                            <input class="reg_input" type="text" name="expiration" required > <br>
                         <br>
                 </fieldset>
                             </div>
