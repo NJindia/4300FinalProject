@@ -7,7 +7,7 @@ body {
   height: auto;
 }
 
-#title_logo{
+#title_logo {
   width: 30%;
   height: auto;
   padding-bottom: 2%;
@@ -25,7 +25,6 @@ body {
   opacity: 90%;
   padding-bottom: 0%;
   margin-bottom: 1%;
-
 }
 
 #text_nav {
@@ -100,10 +99,10 @@ body {
 }
 
 #games {
-  margin-top:4%;
+  margin-top: 4%;
 }
 
-#social_media {   
+#social_media {
   line-height: 100%;
   width: 100%;
   background-color: steelblue;
@@ -112,15 +111,38 @@ body {
   float: left;
 }
 
-#social_media p {color: white;font-size: 100%;}
+#social_media p {
+  color: white;
+  font-size: 100%;
+}
 
 img.social_media {
-  padding: .5%;
-  padding-bottom: .5%;
-  width:3%;
+  padding: 0.5%;
+  padding-bottom: 0.5%;
+  width: 3%;
   text-decoration: none;
 }
 
 .social_media:hover {
-    opacity: 0.7;
+  opacity: 0.7;
+}
+
+.white {
+  position: relative;
+  float: right;
+  color: white;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  margin-top: -7.5%;
+  margin-right: 2%;
+}
+
+#signin {
+  color: white;
+  text-decoration: none;
+}
+
+#signin:hover {
+  text-decoration: underline;
 }

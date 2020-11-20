@@ -1,94 +1,146 @@
 
-
 #myAccount {
-    margin-top: 4em;
-    background-color: white;
+    margin-top: 3em;
+    background-color:slategray;
     height: 100%;
 }
 #accountInfo {
     padding: 2em;
 }
 .infoHeaders {
-    color: slategrey;
+    color: black;
 }
 .info {
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
+.error {
+  color: maroon;
+}
 
 /* --- Home.css --- */
-body{    background-color: gray}
-
-#icon{
+body {
+    background-color: gray;
+  }
+  
+  #icon {
     width: 10%;
     height: auto;
-}
-
-#main {
-    margin-left:10%;
+  }
+  
+  #title_logo{
+    width: 30%;
+    height: auto;
+    padding-bottom: 2%;
+  }
+  
+  #main {
+    margin-left: 10%;
     margin-right: 10%;
-    margin-bottom:0%;
-    margin-top:0%;
-    position: absolute;
+    margin-top: 0%;
     width: 80%;
-    height:150%;
-    background-color:  rgb(20,25,47); 
-    opacity: 90%;
-}
-
-#text_nav{
-    width: 100%;
-    height: 50px;
+    min-height: 100%;
+    background-color: rgb(20, 25, 47);
+    position: relative;
     float: left;
-}
-#text_nav ul ul{
-    margin-top:-1.3%; 
-    padding:0; 
-    display:none; 
-    position: absolute; 
+    opacity: 90%;
+    padding-bottom: 0%;
+    margin-bottom: 1%;
+  
+  }
+  
+  #text_nav {
+    width: 100%;
+    float: left;
+  }
+  #text_nav ul ul {
+    padding: 0;
+    display: none;
+    position: absolute;
     top: 100%;
-    width: 10%; 
+    width: 10%;
     z-index: 2;
-}
-#text_nav ul ul li{float:none;width:100%;}
-#text_nav ul li:hover > ul{display:block;}
-#text_nav ul{list-style-type:none;padding:0;margin:0;position: relative;}
-#text_nav li {
-    width: 10%; 
-    text-align: center; 
-    line-height: 50px;   
-    font-weight: bold;
-    font-size: 18px;
-    padding: 0; 
+  }
+  #text_nav ul ul li {
+    float: none;
+    width: 100%;
+    font-size: 100%;
+  }
+  #text_nav ul li:hover > ul {
+    display: block;
+  }
+  #text_nav ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    color:white;
-}
-#text_nav li.li_left {
-    float:left; 
-}
-#text_nav li.li_right {
-    float:right; 
-}
-#text_nav > ul::after {content: "";display: block;clear: both; }
-#text_nav li:hover{background-color:steelblue;}
-#text_nav a{
-    text-decoration: none; 
-    color:white;
-    font-size: 18px;
-}
-#text_nav #currPage{background-color: steelblue;}
-#pfp, #cart {height: 50px;width: 50px;}
-.games{
-    align-items: center;
-}
+    position: relative;
+  }
+  #text_nav li {
+    text-align: center;
+    line-height: 200%;
+    font-weight: bold;
+    font-size: 150%;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+  #text_nav li.li_left {
+    float: left;
+    width: 15%;
+  }
+  #text_nav li.li_right {
+    float: right;
+    width: 10%;
+  }
+  #text_nav > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #text_nav li:hover {
+    background-color: steelblue;
+  }
+  #text_nav a {
+    text-decoration: none;
+    color: white;
+  }
+  #text_nav #currPage {
+    background-color: steelblue;
+  }
+  #pfp,
+  #cart {
+    width: 30%;
+  }
+  .games {
+    display: block;
+    height: 30%;
+    width: 80%;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #games {
+    margin-top:4%;
+  }
+  
+  #social_media {   
+    line-height: 100%;
+    width: 100%;
+    background-color: steelblue;
+    opacity: 90%;
+    text-align: center;
+    float: left;
+  }
+  
+  #social_media p {color: white;font-size: 100%;}
+  
+  img.social_media {
+    padding: .5%;
+    padding-bottom: .5%;
+    width:3%;
+    text-decoration: none;
+  }
+  
+  .social_media:hover {
+      opacity: 0.7;
+  }

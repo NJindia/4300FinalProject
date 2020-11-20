@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php
+    SESSION_start(); ?> <!DOCTYPE html>
 <html>
     <!-- the head section -->
     <head>

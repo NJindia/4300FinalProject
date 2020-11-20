@@ -104,7 +104,7 @@ CREATE TABLE `user_info` (
   `last` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(150) NOT NULL,
-  `phone` varchar(10) NOT NULL
+  `phone` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -140,3 +140,29 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+CREATE TABLE `payment` (
+  `payment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(45) NOT NULL,
+  `card_type` varchar(45) NOT NULL,
+  `card_num` varchar(16) NOT NULL,
+  `expiration` varchar(10) NOT NULL,
+   PRIMARY KEY (`payment_id`),
+   UNIQUE KEY (`card_num`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `payment` (`payment_id`, `user_id`, `card_type`, `card_num`, `expiration`) VALUES
+(1, 1, 'Visa', '1234123412341234', '12/25/2020');
+
+  
+  CREATE TABLE `address` (
+  `address_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(45) NOT NULL,
+  `street` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `state` varchar(100) NOT NULL,
+  `zipcode` varchar(5) NOT NULL,
+  PRIMARY KEY (`address_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `address` (`address_id`, `user_id`, `street`, `city`, `state`, zipcode) VALUES
+(1, 1, '1 Way St', 'New York City', 'New York', '10000');
+  

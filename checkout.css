@@ -15,7 +15,6 @@
 }
 
 fieldset{
-    float: left;
     width: 50%;
     margin: 30px;
     padding: 30px;
@@ -25,14 +24,21 @@ fieldset{
     text-align: right;
 }
 
+.total{
+    font-weight: normal;
+    color: white;
+}
+
+#code{
+    text-align: right;
+}
 #review{
-    clear: both;
+   margin-bottom: 15em;
 }
 
 legend{
     color: white;
     text-align: center;
-    font-size: 150%;
 }
 
 label{
@@ -41,19 +47,13 @@ label{
     padding-left: 20px;
 }
 
-.select{
-    display: inline;
-    padding-left: 20px;
-}
-
-p{
+#sum{
     color: white;
     text-align: right;
-    font-size: 200%;
     font-weight: bold;
 }
 
-table{
+table, .total{
     margin-left: auto;
     margin-right: auto;
 }
@@ -64,8 +64,20 @@ td{
 }
 
 .items{
-    font-size: 200%;
     width: 100%;
+}
+
+#payment{
+    display: inline;
+}
+
+#card, #card_title, .total, legend, #sum, td{
+    font-size: 150%;
+}
+
+#card{
+    text-align: center;
+    color: white;
 }
 
 a{
@@ -77,5 +89,12 @@ a{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    font-size: 200%;
+}
+
+#edit_cart{
+    text-align: right;
+}
+
+#social_media{
+    clear: both;
 }
