@@ -32,12 +32,8 @@ $statement->closeCursor();
                 <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <?php
-                        if (isset($_SESSION['first'])) { ?><li><a href="myAccount.php">My Account</a></li><?php } ?>
-                        <?php
-                        if (isset($_SESSION['first'])) { ?>
-                            <li><a href="logout.php">Log Out</a></li>
-                        <?php } ?>
+                        <li><a href="myAccount.php">My Account</a></li>
+                        <li><a href="logout.php">Log Out</a></li>
                     </ul>
                 </li>
                 <?php
