@@ -64,60 +64,72 @@ $substrCardNum = substr($paymentInfo['card_num'], -4);
 
         <div id="myAccount">
             <div id="accountInfo">
-                <div id="personalInfo">
-                    <form action="editPersonalPHP.php" method="post">
-                        <h2 class="infoHeaders">Personal Information</h2>
-                        <p><strong>First Name:</strong>
-                            <input type="text" placeholder="New First Name" name="first"><br>
-                            <?php if (isset($first_error)) { ?>
-                                <span class="error"><?php echo $first_error ?></span>
-                            <?php } ?>
-                        </p>
-                        <p><strong>Last Name:</strong>
-                            <input type="text" placeholder="New Last Name" name="last"><br>
-                            <?php if (isset($last_error)) { ?>
-                                <span class="error"><?php echo $last_error ?></span>
-                            <?php } ?>
-                        </p>
-                        <p><strong>Phone Number:</strong>
-                            <input type="text" placeholder="(###) ###-####" name="phone"><br>
-                            <?php if (isset($phone_error)) { ?>
-                                <span class="error"><?php echo $phone_error ?></span>
-                            <?php } ?>
-                        </p>
-                        <input type="submit" value="Save"><br>
-                    </form>
-                </div><br>
-                <div id="emailAndPass">
-                    <form action="editEmailAndPass.php" method="post">
-                        <h2 class="infoHeaders">E-Mail and Password</h2>
-                        <p><strong>Email:</strong>
-                            <?php echo $info['email']; ?>
-                        </p>
-                        <p><strong>Password:</strong> *****</p>
-                        <input type="submit" value="Edit E-Mail and Password">
-                    </form>
-                </div><br>
-                <div id="addressAndPayment">
-                    <form action="editAddress.php" method="post">
-                        <h2 class="infoHeaders">Address and Payment Information</h2>
-                        <p><strong>Address:</strong><br>
-                            <?php echo $addressInfo['street']; ?>
-                            <?php echo $addressInfo['city']; ?>,
-                            <?php echo $addressInfo['state']; ?>,
-                            <?php echo $addressInfo['zipcode']; ?>
-                        </p>
-                        <input type="submit" value="Edit Address Information">
-                    </form>
-                    <form action="editPayment.php" method="post">
-                        <p><strong>Payment Information:</strong><br>
-                            <?php echo $paymentInfo['card_type']; ?>
-                            **** **** **** <?php echo $substrCardNum; ?>
-                        </p>
-                        <input type="submit" value="Edit Payment Information">
-                    </form>
+                <div class="floatLeft">
+                    <div id="personalInfo">
+                        <form action="editPersonalPHP.php" method="post">
+                            <h2 class="infoHeaders">Personal Information</h2>
+                            <p><strong>First Name:</strong>
+                                <input type="text" placeholder="New First Name" name="first"><br>
+                                <?php if (isset($first_error)) { ?>
+                                    <span class="error"><?php echo $first_error ?></span>
+                                <?php } ?>
+                            </p>
+                            <p><strong>Last Name:</strong>
+                                <input type="text" placeholder="New Last Name" name="last"><br>
+                                <?php if (isset($last_error)) { ?>
+                                    <span class="error"><?php echo $last_error ?></span>
+                                <?php } ?>
+                            </p>
+                            <p><strong>Phone Number:</strong>
+                                <input type="text" placeholder="(###) ###-####" name="phone"><br>
+                                <?php if (isset($phone_error)) { ?>
+                                    <span class="error"><?php echo $phone_error ?></span>
+                                <?php } ?>
+                            </p>
+                            <input type="submit" value="Save"><br>
+                        </form>
+                    </div><br>
+                    <div id="emailAndPass">
+                        <form action="editEmailAndPass.php" method="post">
+                            <h2 class="infoHeaders">E-Mail and Password</h2>
+                            <p><strong>Email:</strong>
+                                <?php echo $info['email']; ?>
+                            </p>
+                            <p><strong>Password:</strong> *****</p>
+                            <input type="submit" value="Edit E-Mail and Password">
+                        </form>
+                    </div><br>
+                </div>
+                <div class="floatRight">
+                    <div id="addressAndPayment">
+                        <form action="editAddress.php" method="post">
+                            <h2 class="infoHeaders">Address and Payment Information</h2>
+                            <p><strong>Address:</strong><br>
+                                <?php echo $addressInfo['street']; ?>
+                                <?php echo $addressInfo['city']; ?>,
+                                <?php echo $addressInfo['state']; ?>,
+                                <?php echo $addressInfo['zipcode']; ?>
+                            </p>
+                            <input type="submit" value="Edit Address Information">
+                        </form>
+                        <form action="editPayment.php" method="post">
+                            <p><strong>Payment Information:</strong><br>
+                                <?php echo $paymentInfo['card_type']; ?>
+                                **** **** **** <?php echo $substrCardNum; ?>
+                            </p>
+                            <input type="submit" value="Edit Payment Information">
+                        </form>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="social_media">
+            <a href="#"><img class="social_media" src="images/discord.png"></a>
+            <a href="#"><img class="social_media" src="images/reddit.png"></a>
+            <a href="#"><img class="social_media" src="images/twitter.png"></a>
+            <a href="#"><img class="social_media" src="images/instagram.png"></a>
+            <br>
+            <p>&copy; Smoke Games</p>
         </div>
 
 

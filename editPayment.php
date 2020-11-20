@@ -62,32 +62,34 @@ $paymentInfo = $paymentInfo->fetch();
 
         <div id="myAccount">
             <div id="accountInfo">
-                <div id="personalInfo">
-                    <form action="editPersonal.php" method="post">
-                        <h2 class="infoHeaders">Personal Information</h2>
-                        <p><strong>First Name:</strong>
-                            <?php echo $info['first']; ?>
-                        </p>
-                        <p><strong>Last Name:</strong>
-                            <?php echo $info['last']; ?>
-                        </p>
-                        <p><strong>Phone Number:</strong>
-                            <?php echo $info['phone']; ?>
-                        </p>
-                        <input type="submit" value="Edit Personal Information">
-                    </form>
-                </div><br>
-                <div id="emailAndPass">
-                    <form action="editEmailAndPass.php" method="post">
-                        <h2 class="infoHeaders">E-Mail and Password</h2>
-                        <p><strong>Email:</strong>
-                            <?php echo $info['email']; ?>
-                        </p>
-                        <p><strong>Password:</strong> *****</p>
-                        <input type="submit" value="Edit E-Mail and Password">
-                    </form>
-                </div><br>
-                <div id="addressAndPayment">
+                <div class=floatLeft>
+                    <div id="personalInfo">
+                        <form action="editPersonal.php" method="post">
+                            <h2 class="infoHeaders">Personal Information</h2>
+                            <p><strong>First Name:</strong>
+                                <?php echo $info['first']; ?>
+                            </p>
+                            <p><strong>Last Name:</strong>
+                                <?php echo $info['last']; ?>
+                            </p>
+                            <p><strong>Phone Number:</strong>
+                                <?php echo $info['phone']; ?>
+                            </p>
+                            <input type="submit" value="Edit Personal Information">
+                        </form>
+                    </div><br>
+                    <div id="emailAndPass">
+                        <form action="editEmailAndPass.php" method="post">
+                            <h2 class="infoHeaders">E-Mail and Password</h2>
+                            <p><strong>Email:</strong>
+                                <?php echo $info['email']; ?>
+                            </p>
+                            <p><strong>Password:</strong> *****</p>
+                            <input type="submit" value="Edit E-Mail and Password">
+                        </form>
+                    </div><br>
+                </div>
+                <div class="floatRight">
                     <div id="addressAndPayment">
                         <form action="editAddress.php" method="post">
                             <h2 class="infoHeaders">Address and Payment Information</h2>
@@ -130,10 +132,16 @@ $paymentInfo = $paymentInfo->fetch();
                     </div>
                 </div>
             </div>
-
-
+            <div id="social_media">
+                <a href="#"><img class="social_media" src="images/discord.png"></a>
+                <a href="#"><img class="social_media" src="images/reddit.png"></a>
+                <a href="#"><img class="social_media" src="images/twitter.png"></a>
+                <a href="#"><img class="social_media" src="images/instagram.png"></a>
+                <br>
+                <p>&copy; Smoke Games</p>
+            </div>
         </div>
-
+    </div>
 </body>
 <footer>
 
