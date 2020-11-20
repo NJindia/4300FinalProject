@@ -17,8 +17,7 @@ $substrCardNum = substr($paymentInfo['card_num'],-4);
 ?>
 
 
-<?php
-    SESSION_start(); ?> <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,7 +37,7 @@ $substrCardNum = substr($paymentInfo['card_num'],-4);
             <ul>
                 <li class="li_left" id="currPage"><a href="home.php">Home</a></li>
                 <li class="li_left"><a href="about_us.php">About Us</a></li>
-                <li class="li_left"><a href="">Contact Us</a></li>
+                <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <?php 

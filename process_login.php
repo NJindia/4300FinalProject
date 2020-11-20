@@ -2,9 +2,8 @@
 session_start();
 require_once('database.php');
 
-$query = "SELECT * FROM user_info WHERE id = '1'";
-$info = $db->query($query);
-$info = $info->fetch();
+
+$query = "SELECT * FROM user_info WHERE email = $_POST\['email\]";
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -23,6 +22,8 @@ $info = $info->fetch();
             if($info>0) {
                 $_SESSION['email']=$_POST['email'];
                 $_SESSION['first'] = $info['first'];
+                $_SESSION['last'] = $info['last'];
+                $_SESSION['user_id'] = $info['id'];
                 header("location:home.php");
 
                 }

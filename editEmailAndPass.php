@@ -1,25 +1,27 @@
 <?php
 
 include('database.php');
+session_start();
+
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
+$user_id = $_SESSION['user_id'];
 
-$query = "SELECT * FROM user_info WHERE id = '1'";
+$query = "SELECT * FROM user_info WHERE id = $user_id";
 $info = $db->query($query);
 $info = $info->fetch();
 
-$query = "SELECT * FROM address WHERE user_id = '1'";
+$query = "SELECT * FROM address WHERE user_id = $user_id";
 $addressInfo = $db->query($query);
 $addressInfo = $addressInfo->fetch();
 
-$query = "SELECT * FROM payment WHERE user_id = '1'";
+$query = "SELECT * FROM payment WHERE user_id = $user_id";
 $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
 
 ?>
 
-<?php
-    SESSION_start(); ?> <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

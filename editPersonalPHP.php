@@ -1,7 +1,11 @@
 <?php
 
 include('database.php');
+session_start();
+
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
+
+$user_id = $_SESSION['user_id'];
 
 $first = $_POST['first'];
 $last = $_POST['last'];
@@ -12,7 +16,7 @@ if (!empty($first)) {
         $first_error = "Please input a valid first name.";
     }
     else {
-        $query = "UPDATE user_info SET first = '$first' WHERE id = '1'";
+        $query = "UPDATE user_info SET first = '$first' WHERE id = $user_id";
         $db->exec($query);
     }
 }
@@ -21,7 +25,7 @@ if (!empty($last)) {
         $last_error = "Please input a valid last name.";
     }
     else {
-        $query = "UPDATE user_info SET last = '$last' WHERE id = '1'";
+        $query = "UPDATE user_info SET last = '$last' WHERE id = $user_id";
         $db->exec($query);
     }
 }
@@ -30,7 +34,7 @@ if (!empty($phone)) {
         $phone_error = "Please input a valid phone number.";
     }
     else {
-        $query = "UPDATE user_info SET phone = '$phone' WHERE id = '1'";
+        $query = "UPDATE user_info SET phone = '$phone' WHERE id = $user_id";
         $db->exec($query);
     }
 }
