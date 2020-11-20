@@ -77,7 +77,7 @@ $paymentInfo = $paymentInfo->fetch();
                     <form action="editEmailAndPassPHP.php" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
                         <p><strong>Please enter current password for changes to be made:</strong><br>
-                            <input type="text" placeholder="Enter Current Password" name="currentPass"><br>
+                            <input type="text" placeholder="Enter Current Password" name="currentPass">*<br>
                             <?php if (isset($currentPass_error)) { ?>
                                 <span class="error"><?php echo $currentPass_error ?></span>
                             <?php } ?>

@@ -103,19 +103,19 @@ SESSION_start(); ?>
                                         <option value="Discover">Discover</option>
                                         <option value="Master Card">Master Card</option>
                                         <option value="Visa">Visa</option>
-                                    </select>
+                                    </select>*
                                     <?php if (isset($card_type_error)) { ?>
                                         <span class="error"><?php echo $card_type_error ?></span>
                                     <?php } ?>
                                 </p>
                                 <p><strong>Card Number:</strong>
-                                    <input type="text" placeholder="<?php echo $paymentInfo['card_num'] ?>" name="card_num"><br>
+                                    <input type="text" placeholder="<?php echo $paymentInfo['card_num'] ?>" name="card_num">*<br>
                                     <?php if (isset($card_num_error)) { ?>
                                         <span class="error"><?php echo $card_num_error ?></span>
                                     <?php } ?>
                                 </p>
                                 <p><strong>Expiration:</strong>
-                                    <input type="text" placeholder="YYYY-MM-DD" name="expiration"><br>
+                                    <input type="text" placeholder="YYYY-MM-DD" name="expiration">*<br>
                                     <?php if (isset($expiration_error)) { ?>
                                         <span class="error"><?php echo $expiration_error ?></span>
                                     <?php } ?>

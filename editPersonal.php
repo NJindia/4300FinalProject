@@ -74,7 +74,7 @@ $paymentInfo = $paymentInfo->fetch();
                             <?php } ?>
                         </p>
                         <p><strong>Phone Number:</strong>
-                        <input type="text" placeholder="###-###-####" name="phone"><br>
+                        <input type="text" placeholder="(###)-###-####" name="phone"><br>
                             <?php if (isset($phone_error)) { ?>
                                 <span class="error"><?php echo $phone_error ?></span>
                             <?php } ?>
