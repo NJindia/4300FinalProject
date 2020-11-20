@@ -97,7 +97,7 @@ $substrPhone = "(".substr($info['phone'],0,3).") ".substr($info['phone'],3,3)."-
                     <div id="addressAndPayment">
                         <form action="editAddressPHP.php" method="post">
                             <h2 class="infoHeaders">Address and Payment Information</h2>
-                            <p><strong>Address:</strong><br>
+                            <p><strong> Billing Address:</strong><br>
                                 <p><strong>Street:</strong>
                                     <input type="text" placeholder="<?php echo $addressInfo['street'] ?>" name="street"><br>
                                     <?php if (isset($street_error)) { ?>
