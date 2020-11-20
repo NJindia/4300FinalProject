@@ -1,11 +1,41 @@
+.center {
+  text-align: center;
+  margin-top: 2%;
+}
+
+fieldset {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  display: inline;
+}
 input {
   float: left !important;
 }
-
+.form {
+  align-items: center;
+}
 label {
-  display: BLOCK !important;
-  float: left !important;
-  width: 300px !important;
+  text-align: right;
+  float: left;
+  margin-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  width: 150px;
+}
+
+.reg_input {
+  float: left;
+  width: 200px;
+}
+
+.login_button {
+  width: 100px;
+  height: 40px;
+  background-color: steelblue;
+  color: white;
+  cursor: pointer;
 }
 
 /* contact_us page */
@@ -105,10 +135,6 @@ p {
   height: 22px;
 }
 
-.reg_input {
-  width: 170px;
-  height: 22px;
-}
 .additional_input {
   width: 260px;
   height: 70px;

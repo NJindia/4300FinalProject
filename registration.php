@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf8">
-    <title>Contact Us</title>
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" htef="registration.css">
+    <title>Registration</title>
+    <link rel="icon" href="images/favicon.ico" >
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="contact_us.css" type="text/css">
+    <link rel="stylesheet" href="registration.css" type="text/css">
 </head>
 
 <body>
@@ -43,15 +44,16 @@
 
         <div id="register">
             <div class="center">
-                <h3 class="black ">Create a New Account</h3>
+                <h3 class="black">Create a New Account</h3>
             </div>
 
             <form action="process_registration.php" method="post">
-                <fieldset >
+            <div class="form">    
+            <fieldset >
                     <legend>Account Information</legend>
                     
                         
-                            <label for="email">Email: </label>
+                            <label>Email: </label>
                             <input class="reg_input" id ="email" type="text" name="email" required autofocus > <br>  <br>
                         
                         
@@ -74,36 +76,41 @@
                 <fieldset >
                     <legend>Address</legend>
                     
-                        <div class="name_div">
-                            <input class="reg_input" type="text" name="street" required placeholder="Street Adress"> <br> 
-                        </div><br>
-                        <div class="name_div">
-                            <input class="reg_input" type="text" name="city" required placeholder="City"> <br>
-                        </div><br>
-                        <div class="name_div">
-                            <input class="reg_input" type="text" name="state" required placeholder="State"> <br>
-                        </div><br>
-                        <div class="name_div">
-                            <input class="reg_input" type="text" name="zipcode" required placeholder="Zip Code"> <br>
-                        </div><br>
+                            <label>Address: </label>
+                            <input class="reg_input" type="text" name="address" required > <br>  <br>
+                        
+                        
+                            <label>City: </label>
+                            <input class="reg_input" type="text" name="city" required > <br>
+                        <br>
+                        
+                            <label>State: </label>
+                            <input class="reg_input" type="text" name="state" required > <br>
+                        <br>
+                       
+                            <label>Zip Code: </label>
+                            <input class="reg_input" type="text" name="zipcode" required> <br>
+                        <br>
                 </fieldset>
                 <fieldset >
                     <legend>Payment Information</legend>
                    
-                        <div class="name_div">
-                            <input class="reg_input" type="select" name="street" required > <br> 
-                        </div><br>
-                        <div class="name_div">
-                            <input class="reg_input" type="text" name="city" required placeholder="City"> <br>
-                        </div><br>
-                        <div class="name_div">
-                            <input class="reg_input" type="text" name="state" required placeholder="State"> <br>
-                        </div><br>
-                        <div class="name_div">
-                            <input class="reg_input" type="text" name="zipcode" required placeholder="Zip Code"> <br>
-                        </div><br>
+                            <label>Card Type: </label>
+                            <input class="reg_input" type="text" name="address" required > <br>  <br>
+                        
+                        
+                            <label>Card Number: </label>
+                            <input class="reg_input" type="text" name="city" required > <br>
+                        <br>
+                        
+                            <label>Expiration: </label>
+                            <input class="reg_input" type="text" name="state" required > <br>
+                        <br>
                 </fieldset>
+                            </div>
+                <div class="center">
                 <button class="login_button" type="submit" id="submit">Submit </button>
+                            </div>
             </form>
 
         </div>
