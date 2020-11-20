@@ -1,16 +1,14 @@
 <?php
 require_once('database.php');
-#$email = filter_input(INPUT_POST, 'email');
-$email = 'johndoe.gmail.com';
-
-$query = "DELETE FROM cart WHERE user_id='1'";
+if (!isset($_SESSION)) {
+    session_start();
+}
+$email = $_SESSION['email'];
+$user_id = $_SESSION['user_id'];
+$query = "DELETE FROM cart WHERE user_id= $user_id";
     $db->exec($query);
 ?>
 
-
-
-<?php
-    SESSION_start(); ?> <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf8">
