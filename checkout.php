@@ -89,7 +89,7 @@
                         <p class="total" id="method">Payment Method:</p>
                         <p class="total" id="code"><?php echo $card['card_type']. ' ending in '.substr($card['card_num'],-4);?> </p>
                     <form action="post_order.php" method="post">
-                        <input id="buy" type="submit" value="Purchase">
+                        <input id="buy" type="image" src="images/purchase-button.png">
                     </form>
                 </fieldset>
 
@@ -98,6 +98,20 @@
                     <table>
                         <?php foreach($review as $item):?>
                             <tr>
+                                <td class="preview" id="image">
+                                    <?php
+                                        if($item['name'] == "DStacker") { ?>
+                                        <img class="item" id="image" src="images/DStacker.png">
+                                    <?php } ?>
+                                    <?php
+                                        if($item['name'] == "Hack_It;") { ?>
+                                        <img class="item" id="image" src="images/hack_it.png">
+                                    <?php } ?>
+                                    <?php
+                                        if($item['name'] == "Mine Sweeper") { ?>
+                                        <img class="item" id="image" src="images/minesweeper.png">
+                                    <?php } ?>
+                                </td>
                                 <td class="items"> <?php echo $item['name']?> </td> 
                                 <td class="items"> <?php echo '$' . number_format($item['price'],2,'.',',');?> </td>  
                             </tr>
@@ -105,7 +119,7 @@
                     </table>
                     <p id="sum">Total: <?php echo '$' . number_format($sum,2,'.',',');?></p>
                     <form id="edit_cart" >
-                        <input type="button" onclick="location.href='https://google.com';" value="Edit Cart" />
+                        <input type="button" onclick="location.href='cart.php';" value="Edit Cart" />
                     </form>
                 </fieldset> 
             </div>
