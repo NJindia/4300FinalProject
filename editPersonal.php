@@ -1,25 +1,27 @@
 <?php
 
 include('database.php');
+session_start();
+
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
+$user_id = $_SESSION['user_id'];
 
-$query = "SELECT * FROM user_info WHERE id = '1'";
+$query = "SELECT * FROM user_info WHERE id = $user_id";
 $info = $db->query($query);
 $info = $info->fetch();
 
-$query = "SELECT * FROM address WHERE user_id = '1'";
+$query = "SELECT * FROM address WHERE user_id = $user_id";
 $addressInfo = $db->query($query);
 $addressInfo = $addressInfo->fetch();
 
-$query = "SELECT * FROM payment WHERE user_id = '1'";
+$query = "SELECT * FROM payment WHERE user_id = $user_id";
 $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
 
 ?>
 
-<?php
-    SESSION_start(); ?> <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,14 +46,16 @@ $paymentInfo = $paymentInfo->fetch();
                             if(!isset($_SESSION['first'])){?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
                             <?php } ?>
-                        <li><a href="myAccount.php">My Account</a></li>
+                        <?php 
+                            if(isset($_SESSION['first'])){?><li><a href="myAccount.php">My Account</a></li><?php } ?>
                         <?php 
                             if(isset($_SESSION['first'])){?>
                             <li><a href="logout.php">Log Out</a></li>
                             <?php } ?>
                     </ul>
                 </li>
-                <li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li>
+                <?php 
+                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>
             </ul>
         </nav>
         <!--End Navigation Bar-->

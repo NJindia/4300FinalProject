@@ -31,11 +31,13 @@ $statement->closeCursor();
                     <li class="li_right"><img id="pfp" src="images/profilepic.png">
                         <ul>
                             <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                            <li><a href="myAccount.php">My Account</a></li>
+                            <?php 
+                            if(isset($_SESSION['first'])){?><li><a href="myAccount.php">My Account</a></li><?php } ?>
                             <li><a href="">Log Out</a></li>
                         </ul>
                     </li>
-                    <li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li>
+                    <?php 
+                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>    
                 </ul>
             </nav>
             <div id="cart">

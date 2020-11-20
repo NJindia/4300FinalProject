@@ -1,7 +1,11 @@
 <?php
 
 include('database.php');
+session_start();
+
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
+
+$user_id = $_SESSION['user_id'];
 
 $street = $_POST['street'];
 $city = $_POST['city'];
@@ -14,7 +18,7 @@ if (!empty($street)) {
         $street_error = "Please input a valid Street name.";
     }
     else {
-        $query = "UPDATE address SET street = '$street' WHERE user_id = '1'";
+        $query = "UPDATE address SET street = '$street' WHERE user_id = $user_id";
         $db->exec($query);
     }
 }
@@ -24,7 +28,7 @@ if (!empty($city)) {
         $city_error = "Please input a valid City.";
     }
     else {
-        $query = "UPDATE address SET city = '$city' WHERE user_id = '1'";
+        $query = "UPDATE address SET city = '$city' WHERE user_id = $user_id";
         $db->exec($query);
     }
 }
@@ -34,7 +38,7 @@ if (!empty($state)) {
         $state_error = "Please input a valid State.";
     }
     else {
-        $query = "UPDATE address SET state = '$state' WHERE user_id = '1'";
+        $query = "UPDATE address SET state = '$state' WHERE user_id = $user_id";
         $db->exec($query);
     }
 }
@@ -44,7 +48,7 @@ if (!empty($zipcode)) {
         $zipcode_error = "Please input a valid Zipcode.";
     }
     else {
-        $query = "UPDATE address SET zipcode = '$zipcode' WHERE user_id = '1'";
+        $query = "UPDATE address SET zipcode = '$zipcode' WHERE user_id = $user_id";
         $db->exec($query);
     }
 }

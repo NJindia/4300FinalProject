@@ -17,8 +17,7 @@ $substrCardNum = substr($paymentInfo['card_num'],-4);
 ?>
 
 
-<?php
-    SESSION_start(); ?> <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,21 +37,23 @@ $substrCardNum = substr($paymentInfo['card_num'],-4);
             <ul>
                 <li class="li_left" id="currPage"><a href="home.php">Home</a></li>
                 <li class="li_left"><a href="about_us.php">About Us</a></li>
-                <li class="li_left"><a href="">Contact Us</a></li>
+                <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <?php 
                             if(!isset($_SESSION['first'])){?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
                             <?php } ?>
-                        <li><a href="myAccount.php">My Account</a></li>
+                        <?php 
+                            if(isset($_SESSION['first'])){?><li><a href="myAccount.php">My Account</a></li><?php } ?>
                         <?php 
                             if(isset($_SESSION['first'])){?>
                             <li><a href="logout.php">Log Out</a></li>
                             <?php } ?>
                     </ul>
                 </li>
-                <li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li>
+                <?php 
+                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>
             </ul>
         </nav>
         <!--End Navigation Bar-->
