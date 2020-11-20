@@ -26,8 +26,8 @@ $statement->closeCursor();
             <nav id="text_nav" class="top_nav">
                 <ul>
                     <li class="li_left" id="currPage" ><a href="home.php">Home</a></li>
-                    <li class="li_left"><a href="about_us.html">About Us</a></li>
-                    <li class="li_left"><a href="contact_us.html">Contact Us</a></li>
+                    <li class="li_left"><a href="about_us.php">About Us</a></li>
+                    <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                     <li class="li_right"><img id="pfp" src="images/profilepic.png">
                         <ul>
                             <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
@@ -37,7 +37,7 @@ $statement->closeCursor();
                         </ul>
                     </li>
                     <?php 
-                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>    
+                            if(isset($_SESSION['first'])){?><li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li><?php } ?>    
                 </ul>
             </nav>
             <div id="cart">

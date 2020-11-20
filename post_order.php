@@ -43,7 +43,7 @@ $query = "DELETE FROM cart WHERE user_id='1'";
                         </ul>
                     </li>
                     <?php 
-                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>    
+                            if(isset($_SESSION['first'])){?><li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li><?php } ?>    
                 </ul>
             </nav>
             <h3>Thank you for your purchase!</h3>
