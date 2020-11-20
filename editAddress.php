@@ -1,7 +1,9 @@
 <?php
 
 include('database.php');
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
@@ -18,6 +20,8 @@ $addressInfo = $addressInfo->fetch();
 $query = "SELECT * FROM payment WHERE user_id = $user_id";
 $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
+
+$substrCardNum = substr($paymentInfo['card_num'], -4);
 
 ?>
 
@@ -119,7 +123,8 @@ $paymentInfo = $paymentInfo->fetch();
                         </form>
                         <form action="editPayment.php" method="post">
                             <p><strong>Payment Information:</strong><br>
-                                <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
+                                <?php echo $paymentInfo['card_type']; ?>
+                                **** **** **** <?php echo $substrCardNum; ?>
                             </p>
                             <input type="submit" value="Edit Payment Information">
                         </form>

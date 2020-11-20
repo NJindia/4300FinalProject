@@ -1,7 +1,9 @@
 <?php
 
 include('database.php');
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 

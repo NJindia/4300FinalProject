@@ -1,7 +1,9 @@
 <?php
 
 include('database.php');
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
@@ -18,6 +20,8 @@ $addressInfo = $addressInfo->fetch();
 $query = "SELECT * FROM payment WHERE user_id = $user_id";
 $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
+
+$substrCardNum = substr($paymentInfo['card_num'], -4);
 
 ?>
 
@@ -42,15 +46,15 @@ $paymentInfo = $paymentInfo->fetch();
                 <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <?php 
-                            if(!isset($_SESSION['first'])){?>
+                        <?php
+                        if (!isset($_SESSION['first'])) { ?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                            <?php } ?>
+                        <?php } ?>
                         <li><a href="">My Account</a></li>
-                        <?php 
-                            if(isset($_SESSION['first'])){?>
+                        <?php
+                        if (isset($_SESSION['first'])) { ?>
                             <li><a href="logout.php">Log Out</a></li>
-                            <?php } ?>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li class="li_right"><img id="cart" src="images/cart.png"></li>
@@ -112,7 +116,8 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                     <form action="editPayment.php" method="post">
                         <p><strong>Payment Information:</strong><br>
-                            <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
+                            <?php echo $paymentInfo['card_type']; ?>
+                            **** **** **** <?php echo $substrCardNum; ?>
                         </p>
                         <input type="submit" value="Edit Payment Information">
                     </form>

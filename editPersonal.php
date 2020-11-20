@@ -1,7 +1,9 @@
 <?php
 
 include('database.php');
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
@@ -18,6 +20,8 @@ $addressInfo = $addressInfo->fetch();
 $query = "SELECT * FROM payment WHERE user_id = $user_id";
 $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
+
+$substrCardNum = substr($paymentInfo['card_num'], -4);
 
 ?>
 
@@ -42,15 +46,15 @@ $paymentInfo = $paymentInfo->fetch();
                 <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <?php 
-                            if(!isset($_SESSION['first'])){?>
+                        <?php
+                        if (!isset($_SESSION['first'])) { ?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                            <?php } ?>
+                        <?php } ?>
                         <li><a href="myAccount.php">My Account</a></li>
-                        <?php 
-                            if(isset($_SESSION['first'])){?>
+                        <?php
+                        if (isset($_SESSION['first'])) { ?>
                             <li><a href="logout.php">Log Out</a></li>
-                            <?php } ?>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li class="li_right"><img id="cart" src="images/cart.png"></li>
@@ -70,13 +74,13 @@ $paymentInfo = $paymentInfo->fetch();
                             <?php } ?>
                         </p>
                         <p><strong>Last Name:</strong>
-                        <input type="text" placeholder="New Last Name" name="last"><br>
+                            <input type="text" placeholder="New Last Name" name="last"><br>
                             <?php if (isset($last_error)) { ?>
                                 <span class="error"><?php echo $last_error ?></span>
                             <?php } ?>
                         </p>
                         <p><strong>Phone Number:</strong>
-                        <input type="text" placeholder="(###)-###-####" name="phone"><br>
+                            <input type="text" placeholder="(###) ###-####" name="phone"><br>
                             <?php if (isset($phone_error)) { ?>
                                 <span class="error"><?php echo $phone_error ?></span>
                             <?php } ?>
@@ -85,7 +89,7 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                 </div><br>
                 <div id="emailAndPass">
-                <form action="editEmailAndPass.php" method="post">
+                    <form action="editEmailAndPass.php" method="post">
                         <h2 class="infoHeaders">E-Mail and Password</h2>
                         <p><strong>Email:</strong>
                             <?php echo $info['email']; ?>
@@ -107,7 +111,8 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                     <form action="editPayment.php" method="post">
                         <p><strong>Payment Information:</strong><br>
-                            <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
+                            <?php echo $paymentInfo['card_type']; ?>
+                            **** **** **** <?php echo $substrCardNum; ?>
                         </p>
                         <input type="submit" value="Edit Payment Information">
                     </form>
