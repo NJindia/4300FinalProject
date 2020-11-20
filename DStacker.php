@@ -35,14 +35,16 @@ $user_id = 1
                             if(!isset($_SESSION['first'])){?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
                             <?php } ?>
-                            <li><a href="myAccount.php">My Account</a></li>
+                            <?php 
+                            if(isset($_SESSION['first'])){?><li><a href="myAccount.php">My Account</a></li><?php } ?>
                             <?php 
                             if(isset($_SESSION['first'])){?>
                             <li><a href="logout.php">Log Out</a></li>
                             <?php } ?>
                         </ul>
                     </li>
-                    <li class="li_right"><img id="cart" src="images/cart.png"></li>    
+                    <?php 
+                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>    
                 </ul>
             </nav>
             <div id="game_description">
