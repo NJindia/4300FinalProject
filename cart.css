@@ -1,0 +1,8 @@
+h1 {color: white;font-size: 300%;padding-left: 30px;}
+table {color:white;border-collapse: collapse;} 
+th, td {padding: 15px;padding-left: 30px;padding-right: 30px;} 
+td{font-size: 125%;}
+th{font-size: 150%;text-align: left;}
+img{width: 200px; margin-top: 1%;}
+#cart{margin-left:2.5%; margin-right: 2.5%;}
+#checkout{float:right;margin-right: 1%;margin-bottom: 1%;}
