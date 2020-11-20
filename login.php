@@ -106,7 +106,7 @@ require_once('database.php');
                             }
 
                         ?></div>
-                        <a href="signUp.php" style="text-decoration:none;">  <p class="slategrey bold">Not a member yet? Sign up </p> </a>
+                        <a href="registration.php" style="text-decoration:none;">  <p class="slategrey bold">Not a member yet? Sign up </p> </a>
                     </div><br>
                 </form>
                     

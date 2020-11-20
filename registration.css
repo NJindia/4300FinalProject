@@ -1,3 +1,13 @@
+input {
+  float: left !important;
+}
+
+label {
+  display: BLOCK !important;
+  float: left !important;
+  width: 300px !important;
+}
+
 /* contact_us page */
 #contact_us {
   margin-left: 10%;
@@ -59,16 +69,6 @@
 
 p {
   line-height: 60%;
-}
-
-label {
-  display: inline-block;
-  font-weight: bold;
-  text-align: left;
-}
-
-input {
-  float: none;
 }
 
 .name_div {
