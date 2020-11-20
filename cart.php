@@ -17,7 +17,6 @@ $statement->closeCursor();
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="cart.css">
-        <script src="cart.js"></script>
     </head>
     <body>
         <div id="main">
@@ -30,10 +29,20 @@ $statement->closeCursor();
                     <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                     <li class="li_right"><img id="pfp" src="images/profilepic.png">
                         <ul>
-                            <li><a href="">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                            <?php 
+                            if(!isset($_SESSION['first'])){?>
+                            <?php 
+                            if(!isset($_SESSION['first'])){?>
+                            <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
+                            <?php } ?>
+                            <?php } ?>
+
                             <?php 
                             if(isset($_SESSION['first'])){?><li><a href="myAccount.php">My Account</a></li><?php } ?>
-                            <li><a href="">Log Out</a></li>
+                            <?php 
+                            if(isset($_SESSION['first'])){?>
+                            <li><a href="logout.php">Log Out</a></li>
+                            <?php } ?>
                         </ul>
                     </li>
                     <?php 
