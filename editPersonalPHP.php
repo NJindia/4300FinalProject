@@ -30,7 +30,7 @@ if (!empty($last)) {
     }
 }
 if (!empty($phone)) {
-    if (!preg_match("/^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$/", $phone)) {
+    if (!preg_match("/^[0-9]{10}$/", $phone)) {
         $phone_error = "Please input a valid phone number.";
     } else {
         $query = "UPDATE user_info SET phone = '$phone' WHERE id = $user_id";

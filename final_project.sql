@@ -104,7 +104,7 @@ CREATE TABLE `user_info` (
   `last` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(150) NOT NULL,
-  `phone` varchar(14) NOT NULL
+  `phone` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
