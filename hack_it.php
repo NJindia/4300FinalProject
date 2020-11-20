@@ -9,8 +9,7 @@ $statement->closeCursor();
 $user_id = 1
 ?>
 
-<?php
-    SESSION_start(); ?> <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf8">
@@ -55,8 +54,16 @@ $user_id = 1
                     <input type="hidden" name="name" value="<?php echo $name; ?>">
                     <input type="hidden" name="price" value="<?php echo reset($price); ?>">
                     <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                    <input type="image" src="images/add_to_cart.png"><br>
+                    <input type="image" id="add" src="images/add_to_cart.png"><br>
                 </form>
+            </div>
+            <div id="social_media">
+                <a href="#" ><img class="social_media" src="images/discord.png"></a>
+                <a href="#" ><img class="social_media" src="images/reddit.png"></a>
+                <a href="#" ><img class="social_media" src="images/twitter.png"></a>
+                <a href="#" ><img class="social_media" src="images/instagram.png"></a>
+                <br>
+                <p>&copy; Smoke Games</p>
             </div>
         </div>
     </body>

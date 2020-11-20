@@ -10,7 +10,8 @@ $user_id = 1
 ?>
 
 <?php
-    SESSION_start(); ?> <!DOCTYPE html>
+    SESSION_start(); ?> 
+    <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf8">
@@ -58,7 +59,7 @@ $user_id = 1
                     <input type="hidden" name="name" value="<?php echo $name; ?>">
                     <input type="hidden" name="price" value="<?php echo reset($price); ?>">
                     <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                    <input type="image" src="images/add_to_cart.png"><br>
+                    <input type="image" id="add" src="images/add_to_cart.png"><br>
                 </form>
             </div>
             <div id="social_media">
