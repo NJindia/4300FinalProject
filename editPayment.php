@@ -51,7 +51,8 @@ SESSION_start(); ?>
                         <?php } ?>
                     </ul>
                 </li>
-                <li class="li_right"><img id="cart" src="images/cart.png"></li>
+                <?php 
+                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>
             </ul>
         </nav>
         <!--End Navigation Bar-->
