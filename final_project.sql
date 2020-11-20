@@ -166,3 +166,13 @@ INSERT INTO `payment` (`payment_id`, `user_id`, `card_type`, `card_num`, `expira
 INSERT INTO `address` (`address_id`, `user_id`, `street`, `city`, `state`, zipcode) VALUES
 (1, 1, '1 Way St', 'New York City', 'New York', '10000');
   
+
+CREATE TABLE `contact_us` (
+  `contact_us_id` int(11) NOT NULL AUTO_INCREMENT,
+  `first` varchar(100) NOT NULL,
+  `last` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` varchar(1000),
+  `additional` varchar(1000),
+  PRIMARY KEY (`contact_us_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
