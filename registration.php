@@ -17,9 +17,9 @@
         <a href="home.php"><img id="title_logo" src="images/title.png"></a><br>
         <nav id="text_nav" class="top_nav">
             <ul>
-                <li class="li_left" ><a href="home.php">Home</a></li>
+                <li class="li_left"><a href="home.php">Home</a></li>
                 <li class="li_left"><a href="about_us.php">About Us</a></li>
-                <li class="li_left" id="currPage"><a href="contact_us.php">Contact Us</a></li>
+                <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <?php 

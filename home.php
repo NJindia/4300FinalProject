@@ -16,12 +16,7 @@
             <a href="home.php"><img id="icon" src="images/icon.png"></a>
             <a href="home.php"><img id="title_logo" src="images/title.png"></a><br>
             <div class="white"><p>
-                <?php if(isset($_SESSION['first'])) {
-                echo 'Welcome '. $_SESSION['first']; 
-                }?>
-                <?php if(!isset($_SESSION['first'])) {
-                ?> <a id="signin" href="login.php">Sign In</a>
-                <?php }?></p>
+                
                 
             
             </p>
