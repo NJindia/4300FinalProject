@@ -14,8 +14,8 @@
   float: left;
 }
 .floatRight {
-  margin-right: 5em;
-  float: right;
+  margin-left: 5em;
+  float: left;
 }
 
 .infoHeaders {
