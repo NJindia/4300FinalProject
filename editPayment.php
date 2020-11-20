@@ -51,7 +51,7 @@ SESSION_start(); ?>
                         <?php } ?>
                     </ul>
                 </li>
-                <li class="li_right"><img id="cart" src="images/cart.png"></li>
+                <li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li>
             </ul>
         </nav>
         <!--End Navigation Bar-->
