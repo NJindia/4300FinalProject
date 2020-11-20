@@ -8,7 +8,7 @@ $last = $_POST['last'];
 $phone = $_POST['phone'];
 
 if (!empty($first)) {
-    if (!preg_match("/^[a-zA-Z -]+$/",$first)) {
+    if (!preg_match("/^[a-zA-Z]+$/",$first)) {
         $first_error = "Please input a valid first name.";
     }
     else {
@@ -17,7 +17,7 @@ if (!empty($first)) {
     }
 }
 if (!empty($last)) {
-    if (!preg_match("/^[a-zA-Z -]+$/",$last)) {
+    if (!preg_match("/^[a-zA-Z]+$/",$last)) {
         $last_error = "Please input a valid last name.";
     }
     else {
@@ -26,7 +26,7 @@ if (!empty($last)) {
     }
 }
 if (!empty($phone)) {
-    if(!preg_match("/^[0-9]{10}$/", $phone)) {
+    if(!preg_match("/^\([0-9]{3}\)-[0-9]{3}-[0-9]{4}$/", $phone)) {
         $phone_error = "Please input a valid phone number.";
     }
     else {

@@ -18,7 +18,8 @@ $paymentInfo = $paymentInfo->fetch();
 ?>
 
 <?php
-    SESSION_start(); ?> <!DOCTYPE html>
+SESSION_start(); ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,15 +40,15 @@ $paymentInfo = $paymentInfo->fetch();
                 <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <?php 
-                            if(!isset($_SESSION['first'])){?>
+                        <?php
+                        if (!isset($_SESSION['first'])) { ?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
-                            <?php } ?>
+                        <?php } ?>
                         <li><a href="">My Account</a></li>
-                        <?php 
-                            if(isset($_SESSION['first'])){?>
+                        <?php
+                        if (isset($_SESSION['first'])) { ?>
                             <li><a href="logout.php">Log Out</a></li>
-                            <?php } ?>
+                        <?php } ?>
                     </ul>
                 </li>
                 <li class="li_right"><img id="cart" src="images/cart.png"></li>
@@ -97,13 +98,27 @@ $paymentInfo = $paymentInfo->fetch();
                         <form action="editPaymentPHP.php" method="post">
                             <p><strong>Change Payment Information:</strong><br>
                                 <p><strong>Card Type:</strong>
-                                    <input type="text" placeholder="<?php echo $paymentInfo['card_type'] ?>" name="card_type">
+                                    <select name="card_type">
+                                        <option value="American Express">American Express</option>
+                                        <option value="Discover">Discover</option>
+                                        <option value="Master Card">Master Card</option>
+                                        <option value="Visa">Visa</option>
+                                    </select>
+                                    <?php if (isset($card_type_error)) { ?>
+                                        <span class="error"><?php echo $card_type_error ?></span>
+                                    <?php } ?>
                                 </p>
                                 <p><strong>Card Number:</strong>
-                                    <input type="text" placeholder="<?php echo $paymentInfo['card_num'] ?>" name="card_num">
+                                    <input type="text" placeholder="<?php echo $paymentInfo['card_num'] ?>" name="card_num"><br>
+                                    <?php if (isset($card_num_error)) { ?>
+                                        <span class="error"><?php echo $card_num_error ?></span>
+                                    <?php } ?>
                                 </p>
                                 <p><strong>Expiration:</strong>
-                                    <input type="text" placeholder="MM/DD/YYYY" name="expiration">
+                                    <input type="text" placeholder="YYYY-MM-DD" name="expiration"><br>
+                                    <?php if (isset($expiration_error)) { ?>
+                                        <span class="error"><?php echo $expiration_error ?></span>
+                                    <?php } ?>
                                 </p>
                             </p>
                             <input type="submit" value="Save">

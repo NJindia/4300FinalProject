@@ -64,19 +64,19 @@ $paymentInfo = $paymentInfo->fetch();
                         <p><strong>First Name:</strong>
                             <input type="text" placeholder="New First Name" name="first"><br>
                             <?php if (isset($first_error)) { ?>
-                                <p class="error"><?php echo $first_error ?></p>
+                                <span class="error"><?php echo $first_error ?></span>
                             <?php } ?>
                         </p>
                         <p><strong>Last Name:</strong>
                         <input type="text" placeholder="New Last Name" name="last"><br>
                             <?php if (isset($last_error)) { ?>
-                                <p class="error"><?php echo $last_error ?></p>
+                                <span class="error"><?php echo $last_error ?></span>
                             <?php } ?>
                         </p>
                         <p><strong>Phone Number:</strong>
-                        <input type="text" placeholder="New Phone Number" name="phone"><br>
+                        <input type="text" placeholder="###-###-####" name="phone"><br>
                             <?php if (isset($phone_error)) { ?>
-                                <p class="error"><?php echo $phone_error ?></p>
+                                <span class="error"><?php echo $phone_error ?></span>
                             <?php } ?>
                         </p>
                         <input type="submit" value="Save"><br>

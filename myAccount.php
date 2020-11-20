@@ -13,6 +13,7 @@ $query = "SELECT * FROM payment WHERE user_id = '1'";
 $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
 
+$substrCardNum = substr($paymentInfo['card_num'],-4);
 ?>
 
 
@@ -96,7 +97,8 @@ $paymentInfo = $paymentInfo->fetch();
                     </form>
                     <form action="editPayment.php" method="post">
                         <p><strong>Payment Information:</strong><br>
-                            <?php echo $paymentInfo['card_type']; ?> <?php echo $paymentInfo['card_num']; ?>
+                            <?php echo $paymentInfo['card_type']; ?>
+                            **** **** **** <?php echo $substrCardNum; ?>
                         </p>
                         <input type="submit" value="Edit Payment Information">
                     </form>
