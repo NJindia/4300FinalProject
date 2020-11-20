@@ -4,8 +4,8 @@ if (!isset($_SESSION)) {
     session_start();
 }
 $email = $_SESSION['email'];
-
-$query = "DELETE FROM cart WHERE user_id='1'";
+$user_id = $_SESSION['user_id'];
+$query = "DELETE FROM cart WHERE user_id= $user_id";
     $db->exec($query);
 ?>
 
