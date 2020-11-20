@@ -44,7 +44,7 @@ $user_id = 1
                         </ul>
                     </li>
                     <?php 
-                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>    
+                            if(isset($_SESSION['first'])){?><li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li><?php } ?>
                 </ul>
             </nav>
             <div id="game_description">

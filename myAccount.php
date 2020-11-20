@@ -1,19 +1,25 @@
 <?php
 require_once('database.php');
+if (!isset($_SESSION)) {
+    session_start();
+}
 
-$query = "SELECT * FROM user_info WHERE id = '1'";
+$user_id = $_SESSION['user_id'];
+
+
+$query = "SELECT * FROM user_info WHERE id = $user_id";
 $info = $db->query($query);
 $info = $info->fetch();
 
-$query = "SELECT * FROM address WHERE user_id = '1'";
+$query = "SELECT * FROM address WHERE user_id = $user_id";
 $addressInfo = $db->query($query);
 $addressInfo = $addressInfo->fetch();
 
-$query = "SELECT * FROM payment WHERE user_id = '1'";
+$query = "SELECT * FROM payment WHERE user_id = $user_id";
 $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
 
-$substrCardNum = substr($paymentInfo['card_num'],-4);
+$substrCardNum = substr($paymentInfo['card_num'], -4);
 ?>
 
 
@@ -40,8 +46,8 @@ $substrCardNum = substr($paymentInfo['card_num'],-4);
                 <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
                 <li class="li_right"><img id="pfp" src="images/profilepic.png">
                     <ul>
-                        <?php 
-                            if(!isset($_SESSION['first'])){?>
+                        <?php
+                        if (!isset($_SESSION['first'])) { ?>
                             <li><a href="login.php">Sign Up/Log In</a></li> <!-- when logged in should be deactivated -->
                             <?php } ?>
                         <?php 
@@ -49,43 +55,45 @@ $substrCardNum = substr($paymentInfo['card_num'],-4);
                         <?php 
                             if(isset($_SESSION['first'])){?>
                             <li><a href="logout.php">Log Out</a></li>
-                            <?php } ?>
+                        <?php } ?>
                     </ul>
                 </li>
                 <?php 
-                            if(isset($_SESSION['first'])){?><li class="li_right"><img id="cart" src="images/cart.png"></li><?php } ?>
+                            if(isset($_SESSION['first'])){?><li class="li_right"><a href="cart.php"><img id="cart" src="images/cart.png"></a></li><?php } ?>
             </ul>
         </nav>
         <!--End Navigation Bar-->
 
         <div id="myAccount">
             <div id="accountInfo">
-                <div id="personalInfo">
-                    <form action="editPersonal.php" method="post">
-                        <h2 class="infoHeaders">Personal Information</h2>
-                        <p><strong>First Name:</strong>
-                            <?php echo $info['first']; ?>
-                        </p>
-                        <p><strong>Last Name:</strong>
-                            <?php echo $info['last']; ?>
-                        </p>
-                        <p><strong>Phone Number:</strong>
-                            <?php echo $info['phone']; ?>
-                        </p>
-                        <input type="submit" value="Edit Personal Information">
-                    </form>
-                </div><br>
-                <div id="emailAndPass">
-                    <form action="editEmailAndPass.php" method="post">
-                        <h2 class="infoHeaders">E-Mail and Password</h2>
-                        <p><strong>Email:</strong>
-                            <?php echo $info['email']; ?>
-                        </p>
-                        <p><strong>Password:</strong> *****</p>
-                        <input type="submit" value="Edit E-Mail and Password">
-                    </form>
-                </div><br>
-                <div id="addressAndPayment">
+                <div class="floatLeft">
+                    <div id="personalInfo">
+                        <form action="editPersonal.php" method="post">
+                            <h2 class="infoHeaders">Personal Information</h2>
+                            <p><strong>First Name:</strong>
+                                <?php echo $info['first']; ?>
+                            </p>
+                            <p><strong>Last Name:</strong>
+                                <?php echo $info['last']; ?>
+                            </p>
+                            <p><strong>Phone Number:</strong>
+                                <?php echo $info['phone']; ?>
+                            </p>
+                            <input type="submit" value="Edit Personal Information">
+                        </form>
+                    </div><br>
+                    <div id="emailAndPass">
+                        <form action="editEmailAndPass.php" method="post">
+                            <h2 class="infoHeaders">E-Mail and Password</h2>
+                            <p><strong>Email:</strong>
+                                <?php echo $info['email']; ?>
+                            </p>
+                            <p><strong>Password:</strong> *****</p>
+                            <input type="submit" value="Edit E-Mail and Password">
+                        </form>
+                    </div><br>
+                </div>
+                <div class="floatRight">
                     <form action="editAddress.php" method="post">
                         <h2 class="infoHeaders">Address and Payment Information</h2>
                         <p><strong>Address:</strong><br>

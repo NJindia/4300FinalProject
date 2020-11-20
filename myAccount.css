@@ -3,10 +3,21 @@
     margin-top: 3em;
     background-color:slategray;
     height: 100%;
+    overflow: auto;
+    clear: both;
 }
 #accountInfo {
     padding: 2em;
 }
+.floatLeft {
+  margin-left: 5em;
+  float: left;
+}
+.floatRight {
+  margin-left: 5em;
+  float: left;
+}
+
 .infoHeaders {
     color: black;
 }

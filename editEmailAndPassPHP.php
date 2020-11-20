@@ -1,7 +1,9 @@
 <?php
 
 include('database.php');
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 $userID = filter_input(INPUT_POST, 'userID', FILTER_VALIDATE_INT);
 
@@ -33,16 +35,12 @@ if ($currentPass == $info['password']) {
             $db->exec($query);
         }
     }
-}
-
-else {
+} else {
     $currentPass_error = "The Current Password is Incorrect";
 }
 
 if (empty($email_error) && empty($currentPass_error) && empty($newPass_error)) {
     include('myAccount.php');
-}
-else {
+} else {
     include("editEmailAndPass.php");
 }
-?>
