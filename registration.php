@@ -8,6 +8,7 @@
     <link rel="icon" href="images/favicon.ico" >
     <link rel="stylesheet" href="home.css" type="text/css">
     <link rel="stylesheet" href="contact_us.css" type="text/css">
+    <link rel="stylesheet" href="myAccount.css">
     <link rel="stylesheet" href="registration.css" type="text/css">
 </head>
 
@@ -77,20 +78,33 @@
                     <legend>Address</legend>
                     
                             <label>Address: </label>
-                            <input class="reg_input" type="text" name="address" required > <br>  <br>
-                        
+                            <input class="reg_input" type="text" name="address" required >
+                            <p><?php if (isset($street_error)) { ?>
+                                        <span class="error"><?php echo $street_error ?></span>
+                                     <?php } ?></p><br> 
+                                    
                         
                             <label>City: </label>
-                            <input class="reg_input" type="text" name="city" required > <br>
-                        <br>
+                            <input class="reg_input" type="text" name="city" required >
+                             <p><?php if (isset($city_error)) { ?>
+                                        <span class="error"><?php echo $city_error ?></span>
+                                    <?php } ?></p> <br>
                         
+                                   
                             <label>State: </label>
-                            <input class="reg_input" type="text" name="state" required > <br>
-                        <br>
-                       
+                            <input class="reg_input" type="text" name="state" required > 
+                            <p><?php if (isset($state_error)) { ?>
+                                        <span class="error"><?php echo $state_error ?></span>
+                                    <?php } ?></p><br>
+                        
+                                    
                             <label>Zip Code: </label>
-                            <input class="reg_input" type="text" name="zipcode" required> <br>
-                        <br>
+                            <input class="reg_input" type="text" name="zipcode" required> 
+                            <p><?php if (isset($zipcode_error)) { ?>
+                                        <span class="error"><?php echo $zipcode_error ?></span>
+                                    <?php } ?></p><br>
+                        
+                                    
                 </fieldset>
                 <fieldset >
                     <legend>Payment Information</legend>

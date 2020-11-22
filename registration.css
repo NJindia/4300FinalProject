@@ -7,7 +7,7 @@ fieldset {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 500px;
+  width: 1000px;
   display: inline;
 }
 input {
