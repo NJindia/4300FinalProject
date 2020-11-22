@@ -8,7 +8,7 @@
     <link rel="icon" href="images/favicon.ico" >
     <link rel="stylesheet" href="home.css" type="text/css">
     <link rel="stylesheet" href="contact_us.css" type="text/css">
-    <link rel="stylesheet" href="myAccount.css">
+    <!-- <link rel="stylesheet" href="myAccount.css" type="text/css"> -->
     <link rel="stylesheet" href="registration.css" type="text/css">
 </head>
 
@@ -55,24 +55,39 @@
                     
                         
                             <label>Email: </label>
-                            <input class="reg_input" id ="email" type="text" name="email" required autofocus > <br>  <br>
-                        
+                            <input class="reg_input" id ="email" type="text" name="email" required autofocus > 
+                            <p><?php if (isset($email_error)) { ?>
+                                    <br><span class="error"><?php echo $email_error ?></span>
+                                <?php } ?><br></p>
+                                
                         
                             <label>Password: </label>
-                            <input class="reg_input" type="text" name="password" required > <br>
-                        <br>
+                            <input class="reg_input" type="text" name="password" required >
+                            <p><?php if (isset($newPass_error)) { ?>
+                                    <br><br><br><span class="error"><?php echo $newPass_error ?></span>
+                                <?php } ?> <br><br></p>
+                       
                         
                             <label>First Name: </label>
-                            <input class="reg_input" type="text" name="first" required > <br>
-                        <br>
+                            <input class="reg_input" type="text" name="first" required > 
+                             <p><?php if (isset($first_error)) { ?>
+                                    <br><br><br><span class="error"><?php echo $first_error ?></span>
+                                <?php } ?><br></p><br>
+                      
                        
                             <label>Last Name: </label>
-                            <input class="reg_input" type="text" name="last" required> <br>
-                        <br>
+                            <input class="reg_input" type="text" name="last" required>
+                            <p><?php if (isset($last_error)) { ?>
+                                    <br><span class="error"><?php echo $last_error ?></span>
+                                <?php } ?> <br></p>
+                        
                         
                             <label>Phone Number: </label>
-                            <input class="reg_input" type="text" name="phone" required> <br>
-                        <br>
+                            <input class="reg_input" type="text" name="phone" required>
+                            <p><?php if (isset($phone_error)) { ?>
+                                   <br> <br><br><span class="error"><?php echo $phone_error ?></span>
+                                <?php } ?> <br></p>
+                       
                 </fieldset>
                 <fieldset >
                     <legend>Address</legend>
@@ -80,28 +95,28 @@
                             <label>Address: </label>
                             <input class="reg_input" type="text" name="address" required >
                             <p><?php if (isset($street_error)) { ?>
-                                        <span class="error"><?php echo $street_error ?></span>
+                                        <br><span class="error"><?php echo $street_error ?></span>
                                      <?php } ?></p><br> 
                                     
                         
                             <label>City: </label>
                             <input class="reg_input" type="text" name="city" required >
                              <p><?php if (isset($city_error)) { ?>
-                                        <span class="error"><?php echo $city_error ?></span>
+                                        <br><span class="error"><?php echo $city_error ?></span>
                                     <?php } ?></p> <br>
                         
                                    
                             <label>State: </label>
                             <input class="reg_input" type="text" name="state" required > 
                             <p><?php if (isset($state_error)) { ?>
-                                        <span class="error"><?php echo $state_error ?></span>
+                                        <br><span class="error"><?php echo $state_error ?></span>
                                     <?php } ?></p><br>
                         
                                     
                             <label>Zip Code: </label>
                             <input class="reg_input" type="text" name="zipcode" required> 
                             <p><?php if (isset($zipcode_error)) { ?>
-                                        <span class="error"><?php echo $zipcode_error ?></span>
+                                        <br><span class="error"><?php echo $zipcode_error ?></span>
                                     <?php } ?></p><br>
                         
                                     
@@ -110,16 +125,30 @@
                     <legend>Payment Information</legend>
                    
                             <label>Card Type: </label>
-                            <input class="reg_input" type="text" name="cardType" required > <br>  <br>
+                            <select name="cardType">
+                                        <option value="American Express">American Express</option>
+                                        <option value="Discover">Discover</option>
+                                        <option value="Master Card">Master Card</option>
+                                        <option value="Visa">Visa</option>
+                                    </select><br><br>
+                                    <?php if (isset($card_type_error)) { ?>
+                                    <p><br>    <span class="error"><?php echo $card_type_error ?></span>
+                                    <?php } ?>
                         
                         
                             <label>Card Number: </label>
-                            <input class="reg_input" type="text" name="cardNumber" required > <br>
+                            <input class="reg_input" type="text" placeholder="****************" name="cardNumber" required > <br>
                         <br>
+                        <?php if (isset($card_num_error)) { ?>
+                                       <p><br> <span class="error"><?php echo $card_num_error ?></span>
+                                    <?php } ?>
                         
                             <label>Expiration: </label>
-                            <input class="reg_input" type="text" name="expiration" required > <br>
+                            <input class="reg_input" type="text" placeholder="YYYY-MM-DD" name="expiration" required > <br>
                         <br>
+                        <?php if (isset($expiration_error)) { ?>
+                                      <p><br>  <span class="error"><?php echo $expiration_error ?></span>
+                                    <?php } ?>
                 </fieldset>
                             </div>
                 <div class="center">
