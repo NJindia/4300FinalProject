@@ -105,7 +105,7 @@ $substrCardNum = substr($paymentInfo['card_num'], -4);
                     <div id="addressAndPayment">
                         <form action="editAddress.php" method="post">
                             <h2 class="infoHeaders">Address and Payment Information</h2>
-                            <p><strong>Address:</strong><br>
+                            <p><strong>Billing Address:</strong><br>
                                 <?php echo $addressInfo['street']; ?>
                                 <?php echo $addressInfo['city']; ?>,
                                 <?php echo $addressInfo['state']; ?>,
