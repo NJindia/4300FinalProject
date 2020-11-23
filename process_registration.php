@@ -12,6 +12,7 @@ $state = $_POST['state'];
 $zip = $_POST['zipcode'];
 $cardType = $_POST['cardType'];
 $cardNumber = $_POST['cardNumber'];
+$expiration;
 $expiration = $_POST['expiration'];
 
 $query = "SELECT email FROM user_info WHERE email = '$email'";
