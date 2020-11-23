@@ -126,6 +126,9 @@ if (
     $id = $info['id'];
     $query = "INSERT INTO address (user_id, street, city, state, zipcode) VALUES ('$id', '$street','$city', '$state', '$zip')";
     $db->exec($query);
+    $expiration = '2020-02-02';
+    $cardNumber = '1234123412341234';
+    $cardType = 'Visa';
     $query = "INSERT INTO payment (user_id, card_type, card_num, expiration) VALUES ('$id', '$cardType', '$cardNumber', '$expiration')";
     $db->exec($query);
 

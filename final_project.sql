@@ -146,8 +146,7 @@ CREATE TABLE `payment` (
   `card_type` varchar(45) NOT NULL,
   `card_num` varchar(16) NOT NULL,
   `expiration` varchar(10) NOT NULL,
-   PRIMARY KEY (`payment_id`),
-   UNIQUE KEY (`card_num`)
+   PRIMARY KEY (`payment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 INSERT INTO `payment` (`payment_id`, `user_id`, `card_type`, `card_num`, `expiration`) VALUES
 (1, 1, 'Visa', '1234123412341234', '12/25/2020');
