@@ -135,7 +135,6 @@ if (
     $info = $info->fetch();
 
     $id = $info['id'];
-
     $query = "INSERT INTO address (user_id, street, city, state, zipcode) VALUES ('$id', '$street','$city', '$state', '$zip')";
     $db->exec($query);
     $query = "INSERT INTO payment (user_id, card_type, card_num, expiration) VALUES ('$id', '$cardType', '$cardNumber', '$expiration')";

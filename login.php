@@ -91,7 +91,7 @@ require_once('database.php');
                     <div class="center_div">
                         <div class="name_div">
                             <input class="login_input" type="text" name="email" required autofocus placeholder="Email"> <br> 
-                        </div>
+                        </div><br>
                         <div class="name_div">
                             <input class="login_input" type="text" name="password" required placeholder="Password"> <br>
                         </div><br>

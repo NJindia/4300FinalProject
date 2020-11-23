@@ -52,8 +52,6 @@
             <div class="form">    
             <fieldset >
                     <legend>Account Information</legend>
-                    
-                        
                             <label>Email: </label>
                             <input class="reg_input" id ="email" type="text" name="email" required autofocus > 
                             <p><?php if (isset($email_error)) { ?>
@@ -89,6 +87,7 @@
                                 <?php } ?> <br></p>
                        
                 </fieldset>
+                <br>
                 <fieldset >
                     <legend>Address</legend>
                     
@@ -121,6 +120,7 @@
                         
                                     
                 </fieldset>
+                <br>
                 <fieldset >
                     <legend>Payment Information</legend>
                    
