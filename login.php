@@ -79,45 +79,38 @@ require_once('database.php');
             </ul>
         </nav>
         <!--End Navigation Bar-->
-
+        
         <div id="contact_us">
             <div class="center">
                 <img id="icon2" src="images/icon.png">
                 <h1 class ="black no_top_margin">Welcome to Smoke Games</h1>
             </div>
-
-                <form method="POST" action="process_login.php">
-                <fieldset id="login_fieldset">
-                    <div class="center_div">
-                        <div class="name_div">
-                            <input class="login_input" type="text" name="email" required autofocus placeholder="Email"> <br> 
-                        </div>
-                        <div class="name_div">
-                            <input class="login_input" type="text" name="password" required placeholder="Password"> <br>
-                        </div><br>
-                        <div class="name_div">
-                        <button class="login_button" type="submit" id="submit">Log In </button>
-                        </div>
-                        <br>
-                        <?php 
-                            if(@$_GET['Invalid']==true) { ?>
-                                <div class="red"><?php echo $_GET['Invalid'];
-
-                            }
-
-                        ?></div>
-                        <a href="signUp.php" style="text-decoration:none;">  <p class="slategrey bold">Not a member yet? Sign up </p> </a>
+            <form method="POST" action="process_login.php">
+            <fieldset id="login_fieldset">
+                <div class="center_div">
+                    <div class="name_div">
+                        <input class="login_input" type="text" name="email" required autofocus placeholder="Email"> <br> 
+                    </div>
+                    <br>
+                    <div class="name_div">
+                        <input class="login_input" type="text" name="password" required placeholder="Password"> <br>
                     </div><br>
-                </form>
-                    
+                    <div class="name_div">
+                        <button class="login_button" type="submit" id="submit">Log In </button>
+                    </div>
+                    <br>
+                    <?php 
+                        if(@$_GET['Invalid']==true) { ?>
+                            <div class="red"><?php echo $_GET['Invalid'];
 
-                </fieldset>
-            
+                        }
 
-        </div>
-        
-
-        <div id="social_media">
+                    ?></div>
+                    <a href="signUp.php" style="text-decoration:none;">  <p class="slategrey bold">Not a member yet? Sign up </p> </a>
+                </div><br>
+            </fieldset>
+            </form>
+            <div id="social_media">
             <a href="#" ><img class="social_media" src="images/discord.png"></a>
             <a href="#" ><img class="social_media" src="images/reddit.png"></a>
             <a href="#" ><img class="social_media" src="images/twitter.png"></a>
@@ -125,11 +118,8 @@ require_once('database.php');
             <br>
             <p>&copy; Smoke Games</p>
         </div>
+        </div>      
     </div>
 
 </body>
-<footer>
-
-</footer>
-
 </html>
