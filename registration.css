@@ -7,7 +7,7 @@ fieldset {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 1000px;
+  width: 700px;
   display: inline;
 }
 input {
@@ -98,7 +98,7 @@ label {
 }
 
 p {
-  line-height: 60%;
+  line-height: 80%;
 }
 
 .name_div {

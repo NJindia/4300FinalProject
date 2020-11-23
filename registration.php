@@ -137,10 +137,10 @@
                         
                         
                             <label>Card Number: </label>
-                            <input class="reg_input" type="text" placeholder="****************" name="cardNumber" required > <br>
-                        <br>
+                            <input class="reg_input" type="text" placeholder="****************" name="cardNumber" required > <br><br>
+                       
                         <?php if (isset($card_num_error)) { ?>
-                                       <p><br> <span class="error"><?php echo $card_num_error ?></span>
+                                       <p> <br><span class="error"><?php echo $card_num_error ?></span>
                                     <?php } ?>
                         
                             <label>Expiration: </label>
