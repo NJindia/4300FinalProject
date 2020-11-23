@@ -8,6 +8,7 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="contact_us.css">
+    <script src="contact_us.js"></script>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
                 <p> have. We look forward to hearing from you</p>
             </div>
 
-            <form action="contact_us_submit.php" method="post">
+            <form name ="contact_us_form"  onsubmit="validateForm(event)" action="contact_us_submit.php" method="post">
                 <fieldset id="contact_us_field">
                     <div class="center_div">
                         <div class="name_div">
