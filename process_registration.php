@@ -109,17 +109,6 @@ if (!empty($cardNumber)) {
 } else {
     $card_num_error = "Please enter a valid Card Number.";
 }
-function validateDate($date, $format = 'Y-m-d')
-{
-    return $date == date($format, strtotime($date));
-}
-if (!empty($expiration)) {
-    if (!validateDate($expiration)) {
-        $expiration_error = "Please enter a valid Expiration Date.";
-    } 
-} else {
-    $expiration_error = "Please enter a valid Expiration Date.";
-}
 
 
 if (
