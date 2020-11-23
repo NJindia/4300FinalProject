@@ -43,37 +43,17 @@
 
         <div id="contact_us">
             <div class="center">
-                <h3 class ="monospace maroon top_margin">GOT A QUESTION?</h3>
-                <h1 class="black no_top_margin">Contact Us Below!</h1>
-                <p> We’re here to help and answer any question you might</p>
-                <p> have. We look forward to hearing from you</p>
+                <div class ="yes_top_margin">
+
+                <h1 class="black">Thanks for Contacting Us!</h1>
+                </div>
+                <p> We will contact you through email shortly</p>
             </div>
 
-            <form action="contact_us_submit.php" method="post">
+            <form action="home.php" method="post">
                 <fieldset id="contact_us_field">
-                    <div class="center_div">
-                        <div class="name_div">
-                            <label>First Name </label><span id="error1">*</span><br>
-                            <input class="name_input" type="text" name="firstName" required autofocus><br>
-                        </div>
-                        <div class="name_div">
-                            <label>Last Name </label><span id="error2">*</span><br>
-                            <input class="name_input" type="text" name="lastName" required><br>
-                        </div>
-                    </div><br>
-                    <div class="name_div">
-                    <label>Email </label> <span id="error1">*</span><br>
-                    <input class="email_input" type="text" name="email" required><br>
-                    </div><br>
-                    <div class="name_div">
-                    <label>Message </label><br>
-                    <input class="message_input" type="text" name="message"><br>
-                    </div><br>
-                    <div class="name_div">
-                    <label>Additional Details </label><br>
-                    <input class="additional_input" type="text" name="additionalInfo"><br>
-                    </div><br>
-                    <input class="submitButton" type="submit" id="submit" value="Send Message"><br>
+
+                    <input class="submitButton" type="submit" id="submit" value="Go back to main"><br>
                 </fieldset>
             </form>
 

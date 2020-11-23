@@ -29,7 +29,8 @@ if ($currentPass == $info['password']) {
     }
     if (!empty($newPass)) {
         if (!preg_match('/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/', $newPass)) {
-            $newPass_error = "Please input a valid New Password.";
+            $newPass_error = "Please input a valid Password.<br>
+            A password must be 8-20 characters long with at least: 1 Uppercase, 1 number, and 1 special character.";
         } else {
             $query = "UPDATE user_info SET password = '$newPass' WHERE id = $user_id";
             $db->exec($query);

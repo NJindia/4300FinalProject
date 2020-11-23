@@ -21,8 +21,8 @@
     </head>
     <body>
         <div id="main">
-            <img id="icon" src="images/icon.png">
-            <img id="title_logo" src="images/title.png"><br>
+            <a href="home.php"><img id="icon" src="images/icon.png"></a>
+            <a href="home.php"><img id="title_logo" src="images/title.png"></a><br>
             <nav id="text_nav" class="top_nav">
                 <ul>
                     <li class="li_left" id="currPage" ><a href="home.php">Home</a></li>

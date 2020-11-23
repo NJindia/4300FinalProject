@@ -22,7 +22,7 @@ $user_id = 1
     </head>
     <body>
         <div id="main">
-                        <a href="home.php"><img id="icon" src="images/icon.png"></a>
+            <a href="home.php"><img id="icon" src="images/icon.png"></a>
             <a href="home.php"><img id="title_logo" src="images/title.png"></a><br>
             <nav id="text_nav" class="top_nav">
                 <ul>

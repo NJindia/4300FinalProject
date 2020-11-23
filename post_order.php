@@ -9,6 +9,7 @@ $query = "DELETE FROM cart WHERE user_id= $user_id";
     $db->exec($query);
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf8">

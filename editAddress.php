@@ -23,6 +23,7 @@ $paymentInfo = $paymentInfo->fetch();
 
 $substrCardNum = substr($paymentInfo['card_num'], -4);
 
+$substrPhone = "(".substr($info['phone'],0,3).") ".substr($info['phone'],3,3)."-".substr($info['phone'],-4);
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +77,7 @@ $substrCardNum = substr($paymentInfo['card_num'], -4);
                                 <?php echo $info['last']; ?>
                             </p>
                             <p><strong>Phone Number:</strong>
-                                <?php echo $info['phone']; ?>
+                                <?php echo $substrPhone; ?>
                             </p>
                             <input type="submit" value="Edit Personal Information">
                         </form>
@@ -96,7 +97,7 @@ $substrCardNum = substr($paymentInfo['card_num'], -4);
                     <div id="addressAndPayment">
                         <form action="editAddressPHP.php" method="post">
                             <h2 class="infoHeaders">Address and Payment Information</h2>
-                            <p><strong>Address:</strong><br>
+                            <p><strong> Billing Address:</strong><br>
                                 <p><strong>Street:</strong>
                                     <input type="text" placeholder="<?php echo $addressInfo['street'] ?>" name="street"><br>
                                     <?php if (isset($street_error)) { ?>

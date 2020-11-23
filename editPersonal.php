@@ -22,7 +22,6 @@ $paymentInfo = $db->query($query);
 $paymentInfo = $paymentInfo->fetch();
 
 $substrCardNum = substr($paymentInfo['card_num'], -4);
-
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +82,7 @@ $substrCardNum = substr($paymentInfo['card_num'], -4);
                                 <?php } ?>
                             </p>
                             <p><strong>Phone Number:</strong>
-                                <input type="text" placeholder="(###) ###-####" name="phone"><br>
+                                <input type="text" placeholder="##########" name="phone"><br>
                                 <?php if (isset($phone_error)) { ?>
                                     <span class="error"><?php echo $phone_error ?></span>
                                 <?php } ?>
@@ -106,7 +105,7 @@ $substrCardNum = substr($paymentInfo['card_num'], -4);
                     <div id="addressAndPayment">
                         <form action="editAddress.php" method="post">
                             <h2 class="infoHeaders">Address and Payment Information</h2>
-                            <p><strong>Address:</strong><br>
+                            <p><strong>Billing Address:</strong><br>
                                 <?php echo $addressInfo['street']; ?>
                                 <?php echo $addressInfo['city']; ?>,
                                 <?php echo $addressInfo['state']; ?>,
