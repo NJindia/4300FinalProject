@@ -42,10 +42,10 @@ $substrPhone = "(".substr($info['phone'],0,3).") ".substr($info['phone'],3,3)."-
         <!--Start Navigation Bar-->
         <nav id="text_nav" class="top_nav">
             <ul>
-                <li class="li_left" id="currPage"><a href="home.php">Home</a></li>
+                <li class="li_left"><a href="home.php">Home</a></li>
                 <li class="li_left"><a href="about_us.php">About Us</a></li>
                 <li class="li_left"><a href="contact_us.php">Contact Us</a></li>
-                <li class="li_right"><img id="pfp" src="images/profilepic.png">
+                <li class="li_right" id="currPage"><img id="pfp" src="images/profilepic.png">
                     <ul>
                         <?php
                         if (!isset($_SESSION['first'])) { ?>
