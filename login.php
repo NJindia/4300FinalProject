@@ -108,19 +108,6 @@ require_once('database.php');
                         ?></div>
                         <a href="registration.php" style="text-decoration:none;">  <p class="slategrey bold">Not a member yet? Sign up </p> </a>
                     </div><br>
-                    <div class="name_div">
-                        <button class="login_button" type="submit" id="submit">Log In </button>
-                    </div>
-                    <br>
-                    <?php 
-                        if(@$_GET['Invalid']==true) { ?>
-                            <div class="red"><?php echo $_GET['Invalid'];
-
-                        }
-
-                    ?></div>
-                    <a href="signUp.php" style="text-decoration:none;">  <p class="slategrey bold">Not a member yet? Sign up </p> </a>
-                </div><br>
             </fieldset>
             </form>
             <div id="social_media">
