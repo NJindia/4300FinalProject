@@ -1,5 +1,8 @@
 <?php
-    SESSION_start(); ?> <!DOCTYPE html>
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    ?> <!DOCTYPE html>
 <html>
     <!-- the head section -->
     <head>

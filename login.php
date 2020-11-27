@@ -1,41 +1,13 @@
 <?php
 require_once('database.php');
-
-// $query = "SELECT * FROM user_info WHERE id = '1'";
-// $info = $db->query($query);
-// $info = $info->fetch();
-
-// $query = "SELECT * FROM address WHERE user_id = '1'";
-// $addressInfo = $db->query($query);
-// $addressInfo = $addressInfo->fetch();
-
-// $query = "SELECT * FROM payment WHERE user_id = '1'";
-// $paymentInfo = $db->query($query);
-// $paymentInfo = $paymentInfo->fetch();
-
-// if(isset($_POST['email'])) {
-//     $email = $_POST['email'];
-//     $password = $_POST['password'];
-
-//     $query="select * from user_info where email='".$email."'AND password='".$password."' 
-//     limit 1";
-
-//     $result= $db->query($query);
-//     $info= $result->fetch();
-
-//     if($info>0) {
-//         echo "You Have Successfully Logged In";
-//         exit();
-//     }
-//     else{
-//         echo "The Password Entered is Incorrect";
-//     }
-// }
-// ?>
+?>
 
 
 <?php
-    SESSION_start(); ?> <!DOCTYPE html>
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+?> <!DOCTYPE html>
 <html lang="en">
 
 <head>
