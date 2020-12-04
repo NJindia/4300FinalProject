@@ -18,7 +18,7 @@ Giao Pham:
 
 Jae Oh:
 - Created Log-In page
-- Created Register page
+- Created Registration page
 - Created Contact Us page
 - Did all functionalities on those pages
 
