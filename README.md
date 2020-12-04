@@ -6,7 +6,7 @@ Nikhil Jindia:
 - Created cart database
 - Created Home page
 - Created DStacker page and functionalities
-- Created Cart page
+- Created Cart page and functionalities
 - Created Order Confirmation page
 
 Giao Pham:
