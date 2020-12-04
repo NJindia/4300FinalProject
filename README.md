@@ -12,7 +12,7 @@ Nikhil Jindia:
 Giao Pham:
 - Drew art for the logo and profile pictures
 - Created About Us page
-- Created Checkout page and functionality 
+- Created Checkout page and functionalities 
 - Created Hack_It; game page
 - Created Mine Sweeper game page 
 
