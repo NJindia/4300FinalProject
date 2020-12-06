@@ -16,6 +16,7 @@ $info = $info->fetch();
 $email = $_POST['email'];
 $currentPass = $_POST['currentPass'];
 $newPass = $_POST['newPass'];
+$_SESSION['email']=$email;
 
 
 if ($currentPass == $info['password']) {

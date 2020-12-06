@@ -1,12 +1,15 @@
 <?php
 require_once('database.php');
+if (!isset($_SESSION)) {
+    session_start();
+}
+$user_id = $_SESSION['user_id'];
 $query = "SELECT price FROM games WHERE name = 'Hack_It;' LIMIT 1";
 $name = 'Hack_It;';
 $statement = $db->prepare($query);
 $statement->execute();
 $price = $statement->fetch();
 $statement->closeCursor();
-$user_id = 1
 ?>
 
 <!DOCTYPE html>

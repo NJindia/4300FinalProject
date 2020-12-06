@@ -1,7 +1,9 @@
 <?php
 require_once('database.php');
-SESSION_start();
-$user_id = 1;
+if (!isset($_SESSION)) {
+    session_start();
+}
+$user_id = $_SESSION['user_id'];
 $itemsQuery = 'SELECT * FROM cart WHERE user_id = :user_id';
 $statement = $db->prepare($itemsQuery);
 $statement->bindValue(':user_id', $user_id);

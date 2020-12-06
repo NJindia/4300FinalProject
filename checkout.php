@@ -1,7 +1,8 @@
 <?php
     require_once('database.php');
-    session_start();
-    
+    if (!isset($_SESSION)) {
+        session_start();
+    }
     $user_id = $_SESSION['user_id'];
     $query = "SELECT * FROM cart WHERE user_id=$user_id";
     $review = $db->query($query);
