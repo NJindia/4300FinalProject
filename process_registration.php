@@ -19,7 +19,7 @@ $query = "SELECT email FROM user_info WHERE email = '$email'";
 $check = $db->query($query);
 $check = $check->fetch();
 
-if ($check['email'] != null) {
+if ($check) {
     $email_error = "This E-Mail already exists. Please enter a valid E-Mail.";
 }
 
