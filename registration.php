@@ -147,7 +147,7 @@ if (!isset($_SESSION)) {
                                 <?php } ?> <br><br>
 
                             <label>Expiration: </label>
-                            <input class="reg_input" type="text" placeholder="YYYY-MM-DD" name="expiration" required>
+                            <input class="reg_input" type="text" placeholder="YYYY-MM" name="expiration" required>
                                 <?php if (isset($expiration_error)) { ?>
                                     <p><br> <span class="error"><?php echo $expiration_error ?></span>
                                 <?php } ?>

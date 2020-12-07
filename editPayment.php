@@ -123,7 +123,7 @@ $substrPhone = "(".substr($info['phone'],0,3).") ".substr($info['phone'],3,3)."-
                                     <?php } ?>
                                 </p>
                                 <p><strong>Expiration:</strong>
-                                    <input type="text" placeholder="YYYY-MM-DD" name="expiration">*<br>
+                                    <input type="text" placeholder="YYYY-MM" name="expiration">*<br>
                                     <?php if (isset($expiration_error)) { ?>
                                         <span class="error"><?php echo $expiration_error ?></span>
                                     <?php } ?>

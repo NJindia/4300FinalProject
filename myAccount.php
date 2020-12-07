@@ -107,7 +107,8 @@ $substrPhone = "(".substr($info['phone'],0,3).") ".substr($info['phone'],3,3)."-
                     <form action="editPayment.php" method="post">
                         <p><strong>Payment Information:</strong><br>
                             <?php echo $paymentInfo['card_type']; ?>
-                            **** **** **** <?php echo $substrCardNum; ?>
+                            **** **** **** <?php echo $substrCardNum; ?> <br>
+                            Expiration: <?php echo $paymentInfo['expiration']; ?>
                         </p>
                         <input type="submit" value="Edit Payment Information">
                     </form>

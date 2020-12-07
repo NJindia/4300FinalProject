@@ -111,8 +111,6 @@ CREATE TABLE `user_info` (
 -- Dumping data for table `user_info`
 --
 
-INSERT INTO `user_info` (`id`, `first`, `last`, `email`, `password`, `phone`) VALUES
-(1, 'Alex', 'Nguyen', 'johndoe@gmail.com', 'password', '1231231234');
 
 --
 -- Indexes for dumped tables
@@ -145,11 +143,9 @@ CREATE TABLE `payment` (
   `user_id` varchar(45) NOT NULL,
   `card_type` varchar(45) NOT NULL,
   `card_num` varchar(16) NOT NULL,
-  `expiration` varchar(10) NOT NULL,
+  `expiration` varchar(7) NOT NULL,
    PRIMARY KEY (`payment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-INSERT INTO `payment` (`payment_id`, `user_id`, `card_type`, `card_num`, `expiration`) VALUES
-(1, 1, 'Visa', '1234123412341234', '12/25/2020');
 
   
   CREATE TABLE `address` (
@@ -162,8 +158,6 @@ INSERT INTO `payment` (`payment_id`, `user_id`, `card_type`, `card_num`, `expira
   PRIMARY KEY (`address_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `address` (`address_id`, `user_id`, `street`, `city`, `state`, zipcode) VALUES
-(1, 1, '1 Way St', 'New York City', 'New York', '10000');
   
 
 CREATE TABLE `contact_us` (
