@@ -110,6 +110,17 @@ if (!empty($cardNumber)) {
     $card_num_error = "Please enter a valid Card Number.";
 }
 
+function validateDate($date, $format= 'Y-m-d'){
+    return $date == date($format, strtotime($date));
+}
+if (!empty($expiration)) {
+    if (!validateDate($expiration)){
+        $expiration_error = "Please enter a valid Expiration Date.";
+    }
+}
+else {
+    $expiration_error = "Please enter a valid Expiration Date.";
+}
 
 if (
     empty($street_error) && empty($city_error) && empty($state_error) && empty($zipcode_error) && empty($first_error) &&
