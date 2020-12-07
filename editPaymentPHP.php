@@ -22,7 +22,7 @@ if (!empty($card_num)) {
 else {
     $card_num_error = "Please enter a valid Card Number.";
 }
-function validateDate($date, $format= 'Y-m-d'){
+function validateDate($date, $format= 'Y-m'){
     return $date == date($format, strtotime($date));
 }
 if (!empty($expiration)) {
